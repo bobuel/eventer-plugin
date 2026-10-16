@@ -1,6 +1,17 @@
 # Changelog
 
-## Unreleased
+## 0.1.1
+
+Added a verified local archive/restore helper and a read-only evidence-record
+audit. Documented restoring a working event while retaining frozen archives and
+excluding unrelated private records. Fixed the README installation command.
+
+All seven expanded Luna hosting phases now pass automatic checks and separate
+artifact review, including one documented corrective follow-up. Preserved earlier
+failures and grader corrections. Public GitHub native installation passes in Codex
+and Claude Code; portable installation supports the documented major harnesses.
+The offline suite now has 186 passing tests, including Windows recorder lock-race
+coverage. See docs/verification.md for the precise scope and limitations.
 
 Added three phased, 24-person hosting evaluation packages with raw sources,
 independent graders, observed helper/action journals, fresh-session recovery,
@@ -16,8 +27,8 @@ the report distinguishes those attempts from corrected-protocol runs.
 Added explicit persistent opt-out handling, complete private message previews,
 UTF-8 records and separation of superseded versus current vendor quotes. Fixed
 parallel observation-journal writes and rejection of malformed synthetic sends.
-The expanded Luna run exposes remaining failures and incomplete closeout; these
-changes are not promoted as a fully verified release.
+The initial expanded Luna run exposed failures and incomplete closeout. Its report
+remains available alongside the successful 0.1.1 development evaluation.
 
 ## 0.1.0
 

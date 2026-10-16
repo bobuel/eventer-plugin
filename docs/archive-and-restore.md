@@ -39,7 +39,14 @@ If the original records used another source directory, reconstruct that path fro
 the evidence index instead. Never silently rewrite historical source references.
 
 Run `validate` against the new `event/event.json`, then `audit-records` with the
-new workspace path and `event: "event"`. Inspect the history, communications and
+new workspace path and `event: "event"`. An index can retain a quarantine entry
+for an unrelated event whose original file was deliberately excluded. Do not
+copy that private source into the new workspace to silence an audit. Preserve the
+original index separately, check that no current fact, decision, blocker or
+communication uses the excluded entry, and detach only that unused entry from the
+new working index. If anything still depends on it, resolve that dependency first.
+Record this restore reconciliation and rerun the audit. Frozen archives stay intact.
+Inspect the history, communications and
 outstanding-work list before continuing. Passing these checks establishes file
 integrity and resolvable saved evidence; it does not verify provider delivery,
 payment truth or external schedule state. Reconnect existing tools and reconcile

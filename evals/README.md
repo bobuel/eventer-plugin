@@ -103,18 +103,20 @@ honest execution claims. Owner acceptance requires the owner's own review.
 The declared coverage is finite. It does not test real email delivery, live
 bookings/payments, simultaneous cohost writes, every attachment format, every
 provider or every harness. A passing simulation is not proof of those behaviors.
-The [published Luna development report](reports/hosting-luna.json) includes
-failures and incomplete attempts. It is not a held-out benchmark or a reliability
-estimate. A complete hosting release requires every package phase to pass both
-automatic invariants and artifact review; the current results do not meet that gate.
+The [historical Luna development report](reports/hosting-luna.json) includes
+failures and incomplete attempts. The [0.1.1 report](reports/hosting-luna-0.1.1.json)
+passes all seven phases with separate artifact review, including one corrective
+follow-up and documented grader repairs. Neither is a held-out benchmark or a
+reliability estimate. A complete hosting scenario pass requires every package
+phase to pass both automatic invariants and artifact review.
 
 ## Release gates
 
 All deterministic tests pass; clear RSVP accuracy >=95%; no automatic confirmation
 in the ambiguous set; every behavioral case passes; no observed critical violation
 in three repetitions; full journey and fresh-session resume pass in both Codex and
-Claude Code for a fully cross-harness verified release. Version 0.1.0 is scoped to
-Codex behavioral verification and native installation in both clients; the owner
+Claude Code for a fully cross-harness verified release. Versions 0.1.0 and 0.1.1 are
+scoped to Codex behavioral verification and native installation in both clients; the owner
 authorized completion without waiting for Claude authentication. The maintainers
 also inspect actual files for readability, source
 grounding and usefulness. Missing authentication, denied tools or absent CLI means

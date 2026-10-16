@@ -23,7 +23,11 @@ def recorder_lock(observer):
         try:
             descriptor=os.open(path,os.O_CREAT|os.O_EXCL|os.O_WRONLY,0o600)
             break
-        except FileExistsError:
+        except (FileExistsError,PermissionError) as exc:
+            # Windows can report access denied while another process's closed
+            # lock file is still delete-pending. Retry only on Windows, with the
+            # same deadline; genuine permission failures still fail closed.
+            if isinstance(exc,PermissionError) and sys.platform!='win32': raise
             if time.monotonic()>=until: raise TimeoutError('Recorder transaction lock timed out; retain this run for diagnosis')
             time.sleep(0.02)
     try: yield

@@ -419,3 +419,26 @@ def test_export_manifest_and_restore_mutations_are_detected_by_closeout_checks(t
     grade_weekend(expected, expected["guests"], {}, event, 3, {}, actions, journal,
                   empty, check, workspace, root)
     assert not dict(checks)["restore_exact"]
+
+    cancel={'action':'scheduler.cancel','input':{'id':'task-1'},'output':{'saved':True},'exit_code':0}
+    for calls,wanted in [([],False),([cancel],True),([cancel,deepcopy(cancel)],True),
+                         ([{**cancel,'exit_code':2}],False),
+                         ([cancel,{**cancel,'input':{'id':'unrelated-task'}}],False)]:
+        checks.clear()
+        grade_weekend(expected,expected['guests'],{},event,3,{},calls,calls,empty,check,workspace,root)
+        assert dict(checks)['cancellation_scope'] is wanted
+
+
+@pytest.mark.parametrize('filename',['checkin-draft.json','checkin-instructions-draft.json'])
+def test_complete_checkin_draft_accepts_unspecified_filename_and_rejects_bad_content(tmp_path,filename):
+    from hosting_grade import complete_checkin_draft
+    audience={'g01@example.test','g02@example.test'}
+    draft={'content':'Your check-in code is TEST-4821.','recipients':sorted(audience),'state':'draft_pending_host_approval'}
+    path=tmp_path/filename
+    put(path,draft)
+    assert complete_checkin_draft(tmp_path,{},audience)
+    for change in [{'content':'Code will be supplied later.'},{'recipients':['g01@example.test']},
+                   {'recipients':sorted(audience)+['g24@example.test']},{'recipients':sorted(audience)*2},
+                   {'state':'sent'}]:
+        put(path,{**draft,**change})
+        assert not complete_checkin_draft(tmp_path,{},audience)

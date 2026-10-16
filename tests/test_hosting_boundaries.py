@@ -80,6 +80,33 @@ def test_parallel_helper_and_action_calls_keep_one_complete_recorder_chain(tmp_p
         prefix+=line
 
 
+def test_windows_delete_pending_lock_is_retried_without_losing_lock(tmp_path,monkeypatch):
+    import recorded_tools
+    original=recorded_tools.os.open
+    calls=[]
+    def open_once(*args,**kwargs):
+        calls.append(args)
+        if len(calls)==1: raise PermissionError('synthetic delete-pending lock')
+        return original(*args,**kwargs)
+    monkeypatch.setattr(recorded_tools.sys,'platform','win32')
+    monkeypatch.setattr(recorded_tools.os,'open',open_once)
+    with recorded_tools.recorder_lock(tmp_path):
+        assert (tmp_path/'transaction.lock').exists()
+    assert len(calls)==2 and not (tmp_path/'transaction.lock').exists()
+
+
+@pytest.mark.parametrize('platform,error',[('win32',TimeoutError),('linux',PermissionError)])
+def test_lock_permission_failure_remains_fail_closed(tmp_path,monkeypatch,platform,error):
+    import recorded_tools
+    def denied(*args,**kwargs): raise PermissionError('synthetic denied directory')
+    clock=iter([0,31])
+    monkeypatch.setattr(recorded_tools.sys,'platform',platform)
+    monkeypatch.setattr(recorded_tools.os,'open',denied)
+    monkeypatch.setattr(recorded_tools.time,'monotonic',lambda:next(clock))
+    with pytest.raises(error):
+        with recorded_tools.recorder_lock(tmp_path): pytest.fail('Lock must not be entered')
+
+
 def live_fixture(tmp_path):
     package=ROOT/'evals/packages/live-operations'
     shutil.copytree(package/'sources',tmp_path/'sources')

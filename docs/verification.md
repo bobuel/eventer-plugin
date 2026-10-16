@@ -1,5 +1,47 @@
 # Verification record
 
+## Version 0.1.1
+
+All seven phases in the three 24-guest hosting packages pass automatic checks and
+the implementing parent's artifact review against the same installed skill files.
+The [0.1.1 Luna report](../evals/reports/hosting-luna-0.1.1.json) preserves exact
+hashes, original failures and review notes. This is a development evaluation with
+one corrective follow-up for live phase 1, not seven unaided first-attempt passes
+or a measured reliability rate. The evaluator supplied no expected answers.
+
+The offline suite passes 186 tests, including archive safety/integrity, evidence
+links, installer/package checks and negative grader tests. Twelve skills pass
+package validation. The source is checked on Windows, Linux and macOS by
+[GitHub Actions](https://github.com/bobuel/eventer-plugin/actions).
+
+The final two grader corrections accept a complete check-in draft under a filename
+the task did not constrain, and repeated cancellation of the same authorized task
+in the explicitly idempotent simulator. Wrong audiences, missing code, sent drafts,
+unrelated cancellation targets, missing readback and future execution still fail.
+The actual closeout agent made two cancel calls; that inefficiency is retained in
+the review, not reported as a one-call cancellation. A Windows delete-pending lock
+race in the test recorder was also fixed with bounded retry and regression tests.
+
+The archive/restore contained 128 identical files. A separate
+[restore usability check](../evals/reports/restore-usability-0.1.1.json) reconstructed
+a new workspace and passed event/evidence validation. It required explicit
+separation of one unused foreign-event index entry whose protected source was
+intentionally excluded. The maintainer performed that reconciliation in the new
+working copy; the evaluated artifacts and frozen archive were not changed. See
+[the restore procedure](archive-and-restore.md).
+
+[Public GitHub installation](../evals/reports/public-installation-0.1.1.json) passed
+in Codex and Claude Code. All 40 installed skill files matched the tested source,
+both clients reported 0.1.1 enabled, and an installed helper ran successfully.
+Cursor, Copilot, Gemini CLI and OpenCode have documented destinations supported by
+the tested portable installer; their native clients/models were not exercised.
+
+No real email delivery, bookings, payments or production scheduler were tested.
+Claude model behavior, concurrent cohost writes and human owner acceptance remain
+outside this verification. The original hosted service and its data are unchanged.
+
+## Historical development findings before 0.1.1
+
 The original 0.1.0 results below describe the narrower suite available at release.
 A later coverage audit found that its journey grader could accept corrupted
 recipients, assignments, scheduler scope and meaningless prose. Those historical
@@ -9,10 +51,10 @@ check those invariants, with mutation tests for the previously accepted failures
 The repository now also includes three [full hosting packages](../evals/README.md#full-hosting-packages)
 covering 24 synthetic guests across seven phases. Their independently observed
 actions, saved records, fresh-session changes and export restoration are evaluated
-separately from prose quality. Current Luna findings and exact tested content hashes
-are recorded in [the hosting report](../evals/reports/hosting-luna.json).
+separately from prose quality. The earlier failures and tested content hashes
+remain in [the historical hosting report](../evals/reports/hosting-luna.json).
 
-## Current hosting evaluation findings
+### Earlier expanded-suite attempt
 
 The expanded offline suite passes 136 tests locally on Windows, and all twelve
 skills pass package validation. These deterministic results include negative
@@ -36,8 +78,8 @@ a blinded external assessment.
 
 The report retains failed checks, original grades, reviewed artifact hashes,
 protocol defects and the exact installed skill versions. Changes made after those
-runs are explicitly marked as not behaviorally retested. Main contains these
-unreleased improvements; the published and installed 0.1.0 version is unchanged.
+runs were explicitly marked as not behaviorally retested at that time. Version
+0.1.1 above supersedes that status without rewriting the historical report.
 
 ## Historical 0.1.0 release
 

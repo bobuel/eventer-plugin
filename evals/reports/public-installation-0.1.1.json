@@ -1,0 +1,87 @@
+{
+  "verified_at": "2026-10-16T15:07:45.467371+00:00",
+  "plugin_version": "0.1.1",
+  "public_repository": "https://github.com/bobuel/eventer-plugin",
+  "source_commit": "1593adfedc88a275873496d7c295984fbdc20a1b",
+  "clients": {
+    "codex": {
+      "version": "0.1.1",
+      "source": "public GitHub marketplace",
+      "native_install": true,
+      "enabled_readback": true,
+      "byte_identical_skill_files": 40,
+      "installed_helper_quote_total": "131.70"
+    },
+    "claude": {
+      "version": "0.1.1",
+      "source": "public GitHub marketplace",
+      "native_install": true,
+      "enabled_readback": true,
+      "byte_identical_skill_files": 40,
+      "installed_helper_quote_total": "131.70"
+    }
+  },
+  "skill_hashes": {
+    "eventer/SKILL.md": "7e5a675d05796b86dafba7d59f8eaabd99ce6b5f562f14380d07e685f1c6c715",
+    "eventer-communications/SKILL.md": "1575a56a0eb10a268db11ea13416772481f62abe89a1fa9e4d34e8fb8d4180ac",
+    "eventer-guests/SKILL.md": "6615ea5785c3a98ec46e0bc0deb8151bc89c7fb6637ea580e944e28347f4df37",
+    "eventer-lodging/SKILL.md": "1b60c29c2e70d1e6510b8187c57ab0d6bf5035745659e02dd5e77d8daf23c01f",
+    "eventer-meals/SKILL.md": "533f4fecd7e386fa0ae7720681553950e5dd6e2ed02caca50ae137977b596f2a",
+    "eventer-readiness-live/SKILL.md": "068839886425d90ced346a204bc91aff3adef3e5505bbbe8926bf9a3611b9187",
+    "eventer-research/SKILL.md": "4bef1efdab136e9832384d000d7da7e58c0e72609acb15037961f3cf20bae263",
+    "eventer-schedule-transport/SKILL.md": "6bc66770f0676f86ed0ad9e065b2d51e4d337dc47f8730632bb3fd5d5a9f015a",
+    "eventer-setup/SKILL.md": "76ebe5a8a784a5e2555644062dac0faaf5e2e89aaa6ae090a24f9829f5dcdfe2",
+    "eventer-setup-scheduling/SKILL.md": "18855ef8925e18df7b990788117228b47c1b376be9224941cd3846e5f0c3a4bd",
+    "eventer-vendors/SKILL.md": "6a11acd9ab62417f9f1de9858539fee8527e2fa2a31e2def4db113822261c5b9",
+    "eventer-wrap-up/SKILL.md": "fa0b9cfda8e50249a391007b2a8a0cbc88e709985d6b507b3f760c802ec4966e",
+    "eventer/agents/openai.yaml": "6fb197e94e4160ddd32faa748048db3525855f6f834d8592a961761e900c9050",
+    "eventer/references/helpers.md": "0098be6b35ddbc1932779fd31352bcfd81484d19af79661a6a2e1ee681d92335",
+    "eventer/references/operating-contract.md": "69ff996deb99ff5c37ec68362f6818d495fe3d3842a7734377432717b26b5b37",
+    "eventer/references/records.md": "a036806671e16fc854ae6f5b6708fa3b493d6d63bbf887ed1f627a7aecf19f82",
+    "eventer/scripts/archive.py": "ebf9930cf59be3bfc7701ba70b57bfee03c9324f672898360776504e2a55a955",
+    "eventer/scripts/eventer.py": "fb838a1c4372811f91343fd0348a02ce28ec40dd6d3e690b578fafa0b5f7ddb8",
+    "eventer/scripts/record_audit.py": "e213b58f3622765ea939d997b76a37cecf8ef804043746fa662e3d553fe39bdc",
+    "eventer/scripts/engines/errors.py": "d7822335084e1e7adfed416a2d6702530b5616d6e500e4be6a261a9ecba53aec",
+    "eventer/scripts/engines/meal_engine.py": "3534a593b3fc64ff103ce0ecdf7fda889f891e48014a420f02b970bfc2498f5f",
+    "eventer/scripts/engines/research.py": "0f2ca2e8fd129249487fc5552600f43657b6f10c3b0c791882c114aa5e3242c8",
+    "eventer/scripts/engines/rooming_engine.py": "3a002ab87b119b3732e350b29f0d0e2ec573f29d434b71eeb2f44c07aac1ba8d",
+    "eventer/scripts/engines/transport_engine.py": "a5c41dc2f754b9732360874b3f2a0f8e20a10339b2fa7b32a3df1dafbda19d11",
+    "eventer/scripts/engines/vendor_engine.py": "97fc599840e64b26a759f349b3646ec8aa0e0a22395581ec2b66ec3ec674b908",
+    "eventer/scripts/engines/__init__.py": "33cf58dc462241d25a5107e1c9287ee21e51422fab2d526878aca02f64646e5d",
+    "eventer-communications/agents/openai.yaml": "bdca1ce4117949fd1bdc364b8cc87d01b6be6fadf67637456aba2e90f6a6f61b",
+    "eventer-guests/agents/openai.yaml": "cc78f5b7f2d9da488e76972cbecf0214d3c4cb4196021c8e07fa33151e264f3e",
+    "eventer-lodging/agents/openai.yaml": "835bc4ae5d4347711a3711c8f9bca9d6f91ba635383917f0ecc5c1b7ede21e58",
+    "eventer-meals/agents/openai.yaml": "deae913984b6ca5a7139ba0eda4959d0203cc4e4e0da16cd9fa08279eeaed9c1",
+    "eventer-readiness-live/agents/openai.yaml": "662b797f938fb96d2f14c7e2940a4fe079d756af3a8f1002c8e396d7a7e3a23c",
+    "eventer-research/agents/openai.yaml": "3e880ca4fe7c8665b08d6a55b761e97b9610ceb8b64a3c395c8405d5c7b2ea78",
+    "eventer-schedule-transport/agents/openai.yaml": "38ed71a317a9586b37bbc105f459647c92b7c25a94d024efac13099891376f5b",
+    "eventer-setup/agents/openai.yaml": "2344fa6ee7a7eb55dc22300f5f61e93fd319907ceb5b024f249123563eb2457c",
+    "eventer-setup/assets/brief.md": "073bd695278dbd05204a2cafe3e68e07950f2f323884c39a1912b008562cfe40",
+    "eventer-setup/assets/event.json": "5826a1645ce6ab0a8a6d9797c103e837d9e307e2acaa2d90e7ca8991ec268b3b",
+    "eventer-setup-scheduling/agents/openai.yaml": "83b2fc9a702ccf9ca1a8e5455e0fb6f42eac82041390f231896f7779317947d7",
+    "eventer-setup-scheduling/assets/schedule.md": "09778847e5d31d552e2c6b8dcbd3908a087cac04383b0eb566d35d214c8e884d",
+    "eventer-vendors/agents/openai.yaml": "7915a9fda977706c98502a2bfa2d69db90fd3666e446bd963df9898356b2d060",
+    "eventer-wrap-up/agents/openai.yaml": "a4e7553f3cd9abf8c1dc7b1763ea790a820e9421e3d8aa13096f71bd156a9953"
+  },
+  "transcript_hashes": {
+    "claude-helper.txt": "93ec20871dd17431b407c8a12ea279906d32a1d044287d5689fb4ef3f893a4a3",
+    "claude-install.txt": "6cde4aeb9b627a1906eb859155f95714220e9812214627f907cd46ef30ff6839",
+    "claude-list.txt": "a918117cc6f47cd53ebd7300b02531fe179a960c9925ee2cc564421cf72e4347",
+    "claude-marketplace.txt": "c0cd02f60fbaa08fb5468cf3e08db269d89cc628a61345e4757249afd9a6ecd4",
+    "codex-helper.txt": "4f0b23fdf5f83f4c015b15be3f84df23863f5068dff7180a2c061c62e5949936",
+    "codex-install.txt": "33e66aa7bf19c296a9732216a3c0bf4b25337142c882dc3ebc1fa8517c877d95",
+    "codex-list.txt": "f22288de063b837727fdf228bc426fb1e6521ba660029f23c548d9397af78795",
+    "codex-marketplace.txt": "365e97c794ce8c3eb7cad91fb704149dba8da2da90590e7cc702313930c1bd80"
+  },
+  "method": [
+    "Isolated CODEX_HOME and CLAUDE_CONFIG_DIR; no credentials copied.",
+    "Native marketplace add from bobuel/eventer-plugin, native install and enabled/version readback.",
+    "Every installed skill file compared byte for byte with tested source.",
+    "Installed quote helper executed, observed USD 131.70.",
+    "Candidate ZIP installation independently passed the same checks before publication."
+  ],
+  "limits": [
+    "Installation and offline helper execution only; not Claude behavioral verification.",
+    "Cursor, Copilot, Gemini CLI and OpenCode use the tested portable installer; no native/model run in those clients."
+  ]
+}

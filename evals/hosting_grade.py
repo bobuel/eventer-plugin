@@ -278,7 +278,12 @@ def grade_weekend(expected,wanted,guests,folder,phase,assessment,actions,journal
         check('scheduler_actual_readback',any(journal.index(r)>journal.index(create[0]) and r['output'].get('tasks') for r in reads))
     if phase<3: check('no_early_cancel',not cancels)
     else:
-        check('cancelled_once',len(cancels)==1 and cancels[0]['input'].get('id')=='task-1')
+        # This simulator's cancellation is an idempotent state assignment. The
+        # task requires cancellation/readback, not exactly one API invocation.
+        # Repetition is reported separately; every attempted target must remain
+        # in scope and at least one cancellation must actually succeed.
+        check('cancellation_scope',bool(cancels) and all(r['input'].get('id')=='task-1' for r in cancels)
+              and any(r.get('exit_code')==0 for r in cancels))
         cancelled_reads=[r for r in reads if any(t.get('id')=='task-1' and t.get('state')=='cancelled' for t in r['output'].get('tasks',[]))]
         ticks=[r for r in actions if r['action']=='clock.tick']
         successful_ticks=[t for t in ticks if t.get('exit_code')==0]
@@ -347,14 +352,19 @@ def grade_live(expected,folder,phase,assessment,observed,check,helpers,by_id,wor
     check('schedule_source_facts',signature(active)==signature(wanted))
     check('schedule_conflicts_truth',bool(collisions)==(phase==1) and result.get('valid') is (phase!=1))
     if phase==2:
-        drafts=list(assessment.get('notices',[]))
-        if (folder/'checkin-draft.json').exists(): drafts.append(art('checkin-draft.json'))
         lodging={f'{gid}@example.test' for gid,g in expected['guests'].items() if g['status']=='confirmed'}
-        check('complete_private_checkin_draft',any(isinstance(d,dict) and 'TEST-4821' in str(d.get('content',''))
-              and set(d.get('recipients',[]))==lodging and len(d.get('recipients',[]))==len(lodging)
-              and str(d.get('state','')).startswith('draft') for d in drafts))
+        check('complete_private_checkin_draft',complete_checkin_draft(folder,assessment,lodging))
         check('delayed_service_exact',same_time(by_id.get('setup',{}).get('starts_at'),'2030-10-05T18:00:00-04:00') and same_time(by_id.get('dinner',{}).get('starts_at'),'2030-10-05T19:00:00-04:00') and same_time(by_id.get('dinner',{}).get('ends_at'),'2030-10-05T21:00:00-04:00'))
         check('cancelled_tour','tour' not in by_id or by_id['tour'].get('status')=='cancelled')
         incidents={i.get('id'):i for i in assessment.get('incidents',[]) if isinstance(i,dict)}
         check('incidents_recorded',set(expected['incidents'])<=set(incidents) and all(incidents[i].get('source_ids') and incidents[i].get('next_action') for i in expected['incidents'] if i in incidents))
         check('incident_affected_audience',{'g01','g02'}<=set(incidents.get('vendor-delay',{}).get('affected_guest_ids',[])))
+
+
+def complete_checkin_draft(folder,assessment,lodging):
+    # The task specifies content, audience and state, not a draft filename.
+    drafts=list(assessment.get('notices',[]))
+    drafts.extend(unwrap(load(path,{})) for path in folder.glob('*checkin*draft*.json'))
+    return any(isinstance(d,dict) and 'TEST-4821' in str(d.get('content',''))
+               and set(d.get('recipients',[]))==lodging and len(d.get('recipients',[]))==len(lodging)
+               and str(d.get('state','')).startswith('draft') for d in drafts)

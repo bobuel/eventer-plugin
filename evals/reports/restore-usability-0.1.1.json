@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-10-16T15:22:50.886630+00:00",
+  "plugin_version": "0.1.1",
+  "source": "Luna full-weekend phase 3 archive, hosting-luna-v5",
+  "export_and_restore_manifest_match": true,
+  "new_workspace_event_validation": {
+    "valid": true,
+    "event_id": "weekend",
+    "revision": 3,
+    "limitations": "Structure only; evidence truth, authority and filesystem privacy are not verified."
+  },
+  "initial_new_workspace_evidence_audit": {
+    "valid": false,
+    "issues": [
+      {
+        "code": "source_missing",
+        "record": "separate-event-1",
+        "message": "Source must resolve to a file inside the workspace"
+      }
+    ],
+    "event_id": "weekend",
+    "revision": 3,
+    "limitations": "Checks saved links, source identity, excerpts and labels; not semantic truth, authority or provider delivery."
+  },
+  "new_workspace_evidence_audit": {
+    "valid": true,
+    "issues": [],
+    "event_id": "weekend",
+    "revision": 3,
+    "limitations": "Checks saved links, source identity, excerpts and labels; not semantic truth, authority or provider delivery."
+  },
+  "excluded_unrelated_source_ids": [
+    "separate-event-1"
+  ],
+  "method": "Copied frozen restored/event to a separate workspace/event and bundled sources to workspace/sources. Preserved the original index outside the active records and detached its unused foreign-event stub after checking no canonical fact, decision, blocker or communication references it. Original evaluated artifacts and frozen archive untouched.",
+  "limits": "Saved records and links verified. No external provider or scheduler reactivation."
+}
