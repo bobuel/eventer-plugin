@@ -1,0 +1,21 @@
+[
+  {
+    "source_id": "address-correction",
+    "event_id": "correspondence",
+    "actor": "Morgan Host",
+    "body": "Verified g02 corrected email is corrected@example.test. Keep bounced address history."
+  },
+  {
+    "source_id": "plus-one-decision",
+    "event_id": "correspondence",
+    "actor": "Morgan Host",
+    "body": "Decline the plus-one request. Do not add Robin or send a rejection without a reviewed draft."
+  },
+  {
+    "source_id": "resolved-before-reminder",
+    "event_id": "correspondence",
+    "sender_guest_id": "g23",
+    "verified_sender": true,
+    "body": "I cannot come. No more reminders please."
+  }
+]

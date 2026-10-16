@@ -12,6 +12,9 @@ python evals/run.py harness --harness codex --suite rsvp
 python evals/run.py harness --harness codex --suite behavior
 python evals/run.py harness --harness codex --suite critical --repeats 3
 python evals/run.py harness --harness codex --suite journey
+python evals/hosting.py harness --harness codex --package full-weekend --run .eval-runs/weekend-run
+python evals/hosting.py harness --harness codex --package correspondence --run .eval-runs/mail-run
+python evals/hosting.py harness --harness codex --package live-operations --run .eval-runs/live-run
 ```
 
 Replace `codex` with `claude` for Claude Code. Use `--executable /absolute/path`
@@ -49,6 +52,61 @@ The runner installs the complete portable skill collection in an isolated work
 folder. Native plugin installation is a separate release check. Instructions tell
 the agent to remain inside its workspace; the host harness controls sandboxing.
 This is not an adversarial security sandbox against an unrestricted agent.
+
+## Full hosting packages
+
+The additional [packages](packages/coverage.json) begin with a 24-person CSV,
+raw replies, host authority and source documents. They require the installed
+skills to produce usable event records and run the actual offline helpers.
+
+| Package | Phases and principal checks |
+|---|---|
+| `full-weekend` | Setup, household/partial RSVP truth, nightly rooming, private meal needs, limited rides, quotes and reported deposit, one authorized send and daily review; fresh-session cancellations and withdrawn accessible inventory; closeout, duplicate receipt reconciliation, scheduler cancellation, export and restoration |
+| `correspondence` | Cross-event claims, unauthorized household reply, tentative guests, plus-one, injection, duplicate evidence, timeout and bounce; verified address correction, opt-out before reminder, duplicate/out-of-order delivery events |
+| `live-operations` | Multiple vendor quotes and price correction, missing terms, sourced research constraints/freshness, overlapping agenda and future check-in dependency; vendor delay, cancelled activity, targeted notice, private check-in code and unapproved quantity increase |
+
+Each phase runs in a fresh harness process. Sources and installed skills are
+hashed; prior records and observation logs are snapshotted before the next phase.
+The grader compares guest facts, individual meal attendees, bed-night constraints,
+authorized recipients/content, actual helper inputs/results, scheduler arguments,
+receipt states and restored file hashes. It does not trust a model's assertion
+that a tool ran or a plan is valid. The synthetic tool journal is kept outside the
+agent's working folder; the contract prohibits editing or reading it. This remains
+an instruction boundary, not OS-level isolation from an unrestricted agent.
+
+`hosting.py harness` supports Codex or Claude using the existing runner and login.
+It stops on a failed phase and retains the evidence. The default phase timeout is
+900 seconds, configurable up to 3600. It does not retry a failed model run. For a
+different harness, or fresh subagents, stage and grade each phase manually:
+
+```sh
+python evals/hosting.py prepare --run .eval-runs/my-run --package full-weekend --phase 1
+# Give only the generated prompt-1.txt to a fresh agent. Wait for completion.
+python evals/hosting.py grade --run .eval-runs/my-run --package full-weekend --phase 1
+# Inspect the result, then repeat prepare/grade for phases 2 and 3 with fresh agents.
+```
+
+Do not give the evaluated agent `expected.json`, grader code, previous model
+answers or parent reports. Do not repair its files manually and call the result a
+model pass. Preserve failed runs; use a new run directory after a skill correction.
+The JSON report records source, skill and grader hashes. Unit-test reference
+outputs are explicitly synthetic test constructions, not model behavior evidence.
+Regrading an earlier phase uses its saved event snapshot and journal prefix,
+not the later session's records. The first grade is retained as
+`grade-N.original.json` when grading again.
+
+Automated passing and independent artifact review are separate. `overall_passed`
+remains false in automatic reports. Record a separate review with evidence for
+host readability, source grounding, actionable next steps, audience privacy and
+honest execution claims. Owner acceptance requires the owner's own review.
+
+The declared coverage is finite. It does not test real email delivery, live
+bookings/payments, simultaneous cohost writes, every attachment format, every
+provider or every harness. A passing simulation is not proof of those behaviors.
+The [published Luna development report](reports/hosting-luna.json) includes
+failures and incomplete attempts. It is not a held-out benchmark or a reliability
+estimate. A complete hosting release requires every package phase to pass both
+automatic invariants and artifact review; the current results do not meet that gate.
 
 ## Release gates
 

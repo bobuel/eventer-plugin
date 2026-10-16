@@ -72,7 +72,7 @@ def decode_response(text):
     return json.loads(text)
 
 
-def invoke(harness, executable, workspace, prompt, output, timeout):
+def invoke(harness, executable, workspace, prompt, output, timeout, writable_dirs=()):
     env = os.environ.copy()
     # Use subscription login; never silently reuse ambient paid API keys.
     for name in ('OPENAI_API_KEY', 'ANTHROPIC_API_KEY', 'ANTHROPIC_AUTH_TOKEN'):
@@ -85,6 +85,8 @@ def invoke(harness, executable, workspace, prompt, output, timeout):
         if os.name == 'nt':
             # Explicitly retain the native Windows sandbox when isolating user config.
             command[1:1] = ['-c', 'windows.sandbox="elevated"']
+        for folder in writable_dirs:
+            command[-1:-1] = ['--add-dir', str(folder)]
     else:
         command = [executable, '-p', '--output-format', 'json', '--no-session-persistence',
                    '--strict-mcp-config', '--mcp-config', '{"mcpServers":{}}',

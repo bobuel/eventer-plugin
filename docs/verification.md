@@ -1,4 +1,45 @@
-# Verification record: 0.1.0
+# Verification record
+
+The original 0.1.0 results below describe the narrower suite available at release.
+A later coverage audit found that its journey grader could accept corrupted
+recipients, assignments, scheduler scope and meaningless prose. Those historical
+scores must not be read as comprehensive hosting verification. The graders now
+check those invariants, with mutation tests for the previously accepted failures.
+
+The repository now also includes three [full hosting packages](../evals/README.md#full-hosting-packages)
+covering 24 synthetic guests across seven phases. Their independently observed
+actions, saved records, fresh-session changes and export restoration are evaluated
+separately from prose quality. Current Luna findings and exact tested content hashes
+are recorded in [the hosting report](../evals/reports/hosting-luna.json).
+
+## Current hosting evaluation findings
+
+The expanded offline suite passes 136 tests locally on Windows, and all twelve
+skills pass package validation. These deterministic results include negative
+grader tests and do not imply model success.
+
+The development Luna run attempted all seven phases with fresh subagents. Only
+the full-weekend setup and change phases passed both automatic checks and the
+implementing parent's artifact review. This is **not an overall behavioral pass**.
+The review is separate from the evaluated agents, but is not human acceptance or
+a blinded external assessment.
+
+- Correspondence preserved the corrected opt-out in the retest, but malformed
+  send arguments and a renamed evidence source still failed. The simulator also
+  accepted invalid arguments; it now rejects them before creating a receipt.
+- Live operations correctly calculated quotes and changed the agenda. Its final
+  check-in draft withheld the code needed for the host to approve the complete
+  message, so the phase failed despite correct send scope and receipt readback.
+- Closeout reconciled the duplicate receipt and cancelled the schedule. The parent
+  stopped the attempt with export/restore unfinished. Its premature completion
+  claim failed artifact review.
+
+The report retains failed checks, original grades, reviewed artifact hashes,
+protocol defects and the exact installed skill versions. Changes made after those
+runs are explicitly marked as not behaviorally retested. Main contains these
+unreleased improvements; the published and installed 0.1.0 version is unchanged.
+
+## Historical 0.1.0 release
 
 This release contains the full twelve-skill collection and offline helpers. Actual
 model behavior was evaluated in Codex. Claude Code installation was verified;

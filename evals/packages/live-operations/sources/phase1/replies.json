@@ -1,0 +1,156 @@
+[
+  {
+    "source_id": "reply-01",
+    "event_id": "live-operations",
+    "sender_guest_id": "g01",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York. I require wheelchair-accessible lodging."
+  },
+  {
+    "source_id": "reply-02",
+    "event_id": "live-operations",
+    "sender_guest_id": "g02",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York. I have a severe peanut allergy; please keep it private."
+  },
+  {
+    "source_id": "reply-03",
+    "event_id": "live-operations",
+    "sender_guest_id": "g03",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York. I am vegetarian."
+  },
+  {
+    "source_id": "reply-04",
+    "event_id": "live-operations",
+    "sender_guest_id": "g04",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York. I require my own bed."
+  },
+  {
+    "source_id": "reply-05",
+    "event_id": "live-operations",
+    "sender_guest_id": "g05",
+    "verified_sender": true,
+    "body": "I speak for myself and Frankie (g06), as Morgan authorized. We both confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-07",
+    "event_id": "live-operations",
+    "sender_guest_id": "g07",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-08",
+    "event_id": "live-operations",
+    "sender_guest_id": "g08",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-09",
+    "event_id": "live-operations",
+    "sender_guest_id": "g09",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-10",
+    "event_id": "live-operations",
+    "sender_guest_id": "g10",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-11",
+    "event_id": "live-operations",
+    "sender_guest_id": "g11",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-12",
+    "event_id": "live-operations",
+    "sender_guest_id": "g12",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-13",
+    "event_id": "live-operations",
+    "sender_guest_id": "g13",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-14",
+    "event_id": "live-operations",
+    "sender_guest_id": "g14",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-15",
+    "event_id": "live-operations",
+    "sender_guest_id": "g15",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-16",
+    "event_id": "live-operations",
+    "sender_guest_id": "g16",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-17",
+    "event_id": "live-operations",
+    "sender_guest_id": "g17",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-18",
+    "event_id": "live-operations",
+    "sender_guest_id": "g18",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-19",
+    "event_id": "live-operations",
+    "sender_guest_id": "g19",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-20",
+    "event_id": "live-operations",
+    "sender_guest_id": "g20",
+    "verified_sender": true,
+    "body": "I confirm arrival October 4, 2030 at 16:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-21",
+    "event_id": "live-operations",
+    "sender_guest_id": "g21",
+    "verified_sender": true,
+    "body": "I confirm arrival October 5, 2030 at 12:00 and departure October 7 at 10:00, America/New_York."
+  },
+  {
+    "source_id": "reply-22",
+    "event_id": "live-operations",
+    "sender_guest_id": "g22",
+    "verified_sender": true,
+    "body": "I cannot attend."
+  },
+  {
+    "source_id": "reply-23",
+    "event_id": "live-operations",
+    "sender_guest_id": "g23",
+    "verified_sender": true,
+    "body": "Maybe I can come. Please do not count me as confirmed."
+  }
+]

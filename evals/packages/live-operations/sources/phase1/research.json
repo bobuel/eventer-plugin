@@ -1,0 +1,46 @@
+{
+  "source_id": "research-snapshots",
+  "now": "2030-10-04T13:00:00Z",
+  "constraints": {
+    "accessible_required": true,
+    "max_distance_km": 20,
+    "max_travel_minutes": 30,
+    "group_size": 24,
+    "minimum_age": 0
+  },
+  "candidates": [
+    {
+      "id": "accessible",
+      "name": "Garden",
+      "source_url": "https://example.test/garden",
+      "retrieved_at": "2030-10-04T12:00:00Z",
+      "accessible": true,
+      "distance_km": 8,
+      "travel_minutes": 15,
+      "max_group_size": 30,
+      "minimum_age": 0
+    },
+    {
+      "id": "stairs",
+      "name": "Tower",
+      "source_url": "https://example.test/tower",
+      "retrieved_at": "2030-10-04T12:00:00Z",
+      "accessible": false,
+      "distance_km": 6,
+      "travel_minutes": 15,
+      "max_group_size": 30,
+      "minimum_age": 0
+    },
+    {
+      "id": "stale",
+      "name": "Old listing",
+      "source_url": "https://example.test/old",
+      "retrieved_at": "2030-10-01T12:00:00Z",
+      "accessible": true,
+      "distance_km": 10,
+      "travel_minutes": 20,
+      "max_group_size": 30,
+      "minimum_age": 0
+    }
+  ]
+}

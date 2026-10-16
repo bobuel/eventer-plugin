@@ -14,6 +14,9 @@ Use `quote` to normalize each snapshot and `quote-diff` to compare versions.
 Flag material changes such as 212.95 versus 21.95. A corrected quote supersedes
 the earlier proposal only when source identity and host decision are clear.
 Separate quoted, proposed, accepted and fulfilled states.
+Keep the superseded calculation under a distinct filename. The current quote
+artifact must contain the latest supported price, and its total must agree with
+the comparison and balance inputs. Read back all three before reporting them.
 
 Use `balance` for exact-decimal remaining amounts. A host-entered deposit is a
 reported payment with its evidence, not a payment executed by Eventer. Keep

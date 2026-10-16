@@ -12,6 +12,8 @@ can also be piped to stdin. Output is `{ok: true, result: ...}`; failures exit 2
 with `{ok: false, error, message}` on stderr. Output paths must be new files.
 No network calls, credential reads, state commits or external actions occur.
 The complete collection must be installed together; other skills use this helper.
+Read the relevant input contract before calling a helper. Use its exact field
+names. A rejected input is repairable local work, not a completed calculation.
 
 | Operation | JSON input | Result |
 |---|---|---|
@@ -31,6 +33,10 @@ The complete collection must be installed together; other skills use this helper
 
 All timestamps require explicit UTC offsets. Financial amounts are decimal strings.
 IDs must be stable within the event. Duplicate guest identities are rejected.
+The fingerprint result deliberately always says `authorized: false`: it is a
+content hash, not an approval checker. Determine authorization from the host's
+exact action, audience and current revision; do not interpret this field as a
+failed permission lookup or an override of valid host approval.
 Use the ready-to-run JSON files in the repository's `examples/inputs/` as input
 templates. Their synthetic outputs are not records of real bookings or sends.
 
@@ -68,3 +74,15 @@ Research candidate: source_url (public HTTPS), retrieved_at; optional accessible
 distance_km, travel_minutes, max_group_size, minimum_age. Constraints accept only
 accessible_required, max_distance_km, max_travel_minutes, group_size, minimum_age.
 The helper checks URL shape, not DNS or source authenticity; it never fetches URLs.
+
+## Quote and balance
+
+Minimal quote input:
+`{"currency":"USD","items":[{"description":"Dinner","quantity":"2","unit_price":"15.00","source_span":"Two dinners at USD 15.00 each"}],"tax":"0.00","fees":"5.00"}`.
+Use `items`, not `line_items`; keep quantities and amounts as decimal strings.
+Each item's source_span must quote the actual source supporting that line item.
+Keep evidence and approval metadata in the surrounding proposal, not in unknown
+helper fields. For balance, supply `currency`, `total` and `payments`, for example
+`{"currency":"USD","total":"35.00","payments":[{"id":"receipt-1","currency":"USD","amount":"10.00"}]}`.
+Deduplicate repeated copies of a receipt by its transaction ID before calculation;
+retain both source references. Different transactions must retain different IDs.

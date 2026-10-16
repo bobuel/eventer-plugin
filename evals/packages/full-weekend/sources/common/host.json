@@ -1,0 +1,18 @@
+{
+  "source_id": "host-brief",
+  "event_id": "weekend",
+  "host": "Morgan Host",
+  "timezone": "America/New_York",
+  "starts_on": "2030-10-04",
+  "ends_on": "2030-10-07",
+  "location": "Synthetic Lodge",
+  "budget": "3000.00",
+  "currency": "USD",
+  "household_authority": {
+    "g05": [
+      "g05",
+      "g06"
+    ]
+  },
+  "retention": "Keep all records until host chooses otherwise."
+}

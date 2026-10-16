@@ -1,0 +1,97 @@
+{
+  "source_id": "logistics-1",
+  "meal": {
+    "service_start": "2030-10-05T18:00:00-04:00",
+    "service_end": "2030-10-05T20:00:00-04:00",
+    "timezone": "America/New_York",
+    "status": "planning",
+    "serving_categories": [
+      "adult",
+      "child"
+    ]
+  },
+  "ride": {
+    "vehicle_id": "van",
+    "driver_id": "driver",
+    "starts_at": "2030-10-05T16:00:00-04:00",
+    "ends_at": "2030-10-05T17:00:00-04:00",
+    "origin": "Station",
+    "destination": "Lodge",
+    "guest_ids": [
+      "g01",
+      "g02",
+      "g03",
+      "g04"
+    ],
+    "buffer_minutes": 15
+  },
+  "vehicle": {
+    "id": "van",
+    "driver_id": "driver",
+    "driver_authorized": true,
+    "passenger_seats": 2,
+    "accessible": true,
+    "child_seats": 0
+  },
+  "travelers": [
+    {
+      "guest_id": "g01",
+      "pickup_permission": true,
+      "available_from": "2030-10-05T15:00:00-04:00",
+      "available_until": "2030-10-05T18:00:00-04:00",
+      "origin": "Station",
+      "destination": "Lodge",
+      "accessible_required": true,
+      "child_seat_required": false
+    },
+    {
+      "guest_id": "g02",
+      "pickup_permission": true,
+      "available_from": "2030-10-05T15:00:00-04:00",
+      "available_until": "2030-10-05T18:00:00-04:00",
+      "origin": "Station",
+      "destination": "Lodge",
+      "accessible_required": false,
+      "child_seat_required": false
+    },
+    {
+      "guest_id": "g03",
+      "pickup_permission": true,
+      "available_from": "2030-10-05T15:00:00-04:00",
+      "available_until": "2030-10-05T18:00:00-04:00",
+      "origin": "Station",
+      "destination": "Lodge",
+      "accessible_required": false,
+      "child_seat_required": false
+    },
+    {
+      "guest_id": "g04",
+      "pickup_permission": false,
+      "available_from": "2030-10-05T15:00:00-04:00",
+      "available_until": "2030-10-05T18:00:00-04:00",
+      "origin": "Station",
+      "destination": "Lodge",
+      "accessible_required": false,
+      "child_seat_required": false
+    }
+  ],
+  "quote": {
+    "currency": "USD",
+    "items": [
+      {
+        "description": "Dinners",
+        "quantity": "21",
+        "unit_price": "21.95"
+      }
+    ],
+    "tax": "0.00",
+    "fees": "0.00"
+  },
+  "payments": [
+    {
+      "id": "deposit-1",
+      "currency": "USD",
+      "amount": "100.00"
+    }
+  ]
+}

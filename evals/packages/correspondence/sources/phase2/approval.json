@@ -1,0 +1,9 @@
+{
+  "source_id": "corrected-approval",
+  "event_id": "correspondence",
+  "recipients": [
+    "corrected@example.test"
+  ],
+  "content": "Please confirm your contact address with Morgan Host.",
+  "revision": 2
+}

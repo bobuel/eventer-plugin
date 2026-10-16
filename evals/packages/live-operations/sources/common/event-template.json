@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "event_id": "live-operations",
+  "revision": 0,
+  "name": "Synthetic Hosting Weekend",
+  "timezone": "America/New_York",
+  "starts_on": "2030-10-04",
+  "ends_on": "2030-10-07",
+  "host": {
+    "name": "Morgan Host",
+    "authority": "host"
+  },
+  "capabilities": {},
+  "guests": [],
+  "requirements": [],
+  "unresolved": []
+}

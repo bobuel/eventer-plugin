@@ -1,0 +1,10 @@
+{
+  "source_id": "mail-approval",
+  "event_id": "correspondence",
+  "recipients": [
+    "g01@example.test",
+    "bounced@example.test"
+  ],
+  "content": "Please confirm your contact address with Morgan Host.",
+  "revision": 1
+}

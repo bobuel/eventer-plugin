@@ -27,4 +27,17 @@ background worker, account, payment system, or authority of its own.
    users, verify source truth, authorize effects or certify real-world safety.
 10. Report implemented/prepared, saved, executed, observed and accepted separately.
 
+Before writing event.json, read [records](records.md) and preserve its field names
+and stable guest IDs. Validate the saved event with the `validate` helper. Before
+constructing a helper input, read [helpers](helpers.md); do not guess its schema.
+If a local helper rejects an input, inspect the contract, correct the input and
+rerun it. Save the actual successful result, retaining error evidence where useful.
+An uncorrected validation failure means that artifact is incomplete.
+
+Check names, contact roles, evidence excerpts and audiences against the active
+event's sources before finalizing prose. Do not borrow identities from another
+example or event. Keep unrelated records outside the active event's evidence and
+export. A matching evidence ID alone does not establish that an excerpt supports
+the claim; verify the text and its speaker's authority.
+
 See [records](records.md) for durable artifacts and [helpers](helpers.md) for inputs.

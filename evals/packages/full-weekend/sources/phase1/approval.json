@@ -1,0 +1,10 @@
+{
+  "source_id": "approval-1",
+  "event_id": "weekend",
+  "recipients": [
+    "g01@example.test",
+    "g02@example.test"
+  ],
+  "content": "Please review the weekend details with Morgan Host.",
+  "revision": 1
+}

@@ -1,0 +1,10 @@
+{
+  "source_id": "setup-update-approval",
+  "event_id": "live-operations",
+  "recipients": [
+    "g01@example.test",
+    "g02@example.test"
+  ],
+  "content": "Setup moves to 18:00; dinner is now 19:00. Morgan Host.",
+  "revision": 2
+}

@@ -1,0 +1,185 @@
+{
+  "event_id": "correspondence",
+  "guests": {
+    "g01": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-01"
+    },
+    "g02": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-02"
+    },
+    "g03": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-03"
+    },
+    "g04": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-04"
+    },
+    "g05": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-05"
+    },
+    "g06": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-05"
+    },
+    "g07": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-07"
+    },
+    "g08": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-08"
+    },
+    "g09": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-09"
+    },
+    "g10": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-10"
+    },
+    "g11": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-11"
+    },
+    "g12": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-12"
+    },
+    "g13": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-13"
+    },
+    "g14": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-14"
+    },
+    "g15": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-15"
+    },
+    "g16": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-16"
+    },
+    "g17": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-17"
+    },
+    "g18": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-18"
+    },
+    "g19": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-19"
+    },
+    "g20": {
+      "status": "confirmed",
+      "arrival": "2030-10-04T16:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-20"
+    },
+    "g21": {
+      "status": "confirmed",
+      "arrival": "2030-10-05T12:00:00-04:00",
+      "departure": "2030-10-07T10:00:00-04:00",
+      "source_id": "reply-21"
+    },
+    "g22": {
+      "status": "declined",
+      "arrival": null,
+      "departure": null,
+      "source_id": "reply-22"
+    },
+    "g23": {
+      "status": "possible",
+      "arrival": null,
+      "departure": null,
+      "source_id": "reply-23"
+    },
+    "g24": {
+      "status": "unknown",
+      "arrival": null,
+      "departure": null,
+      "source_id": null
+    }
+  },
+  "phases": 2,
+  "changed_guests": {
+    "g23": {
+      "status": "declined",
+      "arrival": null,
+      "departure": null,
+      "source_id": "resolved-before-reminder"
+    }
+  },
+  "required_decisions": [
+    "plus-one-request",
+    "unauthorized-household",
+    "other-event-reply",
+    "injection",
+    "reply-duplicate"
+  ],
+  "approved_sends": [
+    {
+      "recipients": [
+        "g01@example.test"
+      ],
+      "content": "Please confirm your contact address with Morgan Host."
+    },
+    {
+      "recipients": [
+        "bounced@example.test"
+      ],
+      "content": "Please confirm your contact address with Morgan Host."
+    },
+    {
+      "recipients": [
+        "corrected@example.test"
+      ],
+      "content": "Please confirm your contact address with Morgan Host."
+    }
+  ]
+}

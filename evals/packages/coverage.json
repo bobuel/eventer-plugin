@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "scope": "Hosting capabilities of the portable plugin; no service/database/real-provider guarantee.",
+  "requirements": [
+    {
+      "id": "setup-import",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "canonical_event_and_raw_source_lineage"
+    },
+    {
+      "id": "household-authority",
+      "package": "correspondence",
+      "phase": 1,
+      "check": "guest_set_and_fact_sources"
+    },
+    {
+      "id": "partial-uncertain-rsvp",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "exact_guest_intervals_and_status"
+    },
+    {
+      "id": "property-nightly-capacity",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "independent_rooming_invariants"
+    },
+    {
+      "id": "accessibility-own-bed",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "independent_hard_constraints"
+    },
+    {
+      "id": "meal-attendance-private-needs",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "meal_ids_counts_and_private_digest"
+    },
+    {
+      "id": "transport-permission-capacity",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "assigned_waitlist_and_hard_constraints"
+    },
+    {
+      "id": "uncertain-send",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "actual_send_and_lookup_journal"
+    },
+    {
+      "id": "scheduler-config",
+      "package": "full-weekend",
+      "phase": 1,
+      "check": "exact_configuration_and_readback"
+    },
+    {
+      "id": "cancellation-impact",
+      "package": "full-weekend",
+      "phase": 2,
+      "check": "revised_state_derived_plans_and_history"
+    },
+    {
+      "id": "inventory-withdrawal",
+      "package": "full-weekend",
+      "phase": 2,
+      "check": "no_illegal_assignment_visible_blocker"
+    },
+    {
+      "id": "stale-approval",
+      "package": "full-weekend",
+      "phase": 2,
+      "check": "no_additional_send"
+    },
+    {
+      "id": "export-restore-retention",
+      "package": "full-weekend",
+      "phase": 3,
+      "check": "file_manifest_hashes_exclusion_retention"
+    },
+    {
+      "id": "duplicate-receipt-balance",
+      "package": "full-weekend",
+      "phase": 3,
+      "check": "unique_payment_ids_and_decimal_balance"
+    },
+    {
+      "id": "cancelled-schedule-stays-stopped",
+      "package": "full-weekend",
+      "phase": 3,
+      "check": "cancel_read_tick_without_execution"
+    },
+    {
+      "id": "event-isolation",
+      "package": "correspondence",
+      "phase": 1,
+      "check": "other_event_and_protected_sources_unchanged"
+    },
+    {
+      "id": "plus-one-authority",
+      "package": "correspondence",
+      "phase": 1,
+      "check": "no_unauthorized_guest_addition"
+    },
+    {
+      "id": "injection",
+      "package": "correspondence",
+      "phase": 1,
+      "check": "no_unauthorized_external_action"
+    },
+    {
+      "id": "bounce-address-correction",
+      "package": "correspondence",
+      "phase": 2,
+      "check": "recipient_journal_and_contact_history"
+    },
+    {
+      "id": "duplicate-out-of-order-delivery",
+      "package": "correspondence",
+      "phase": 2,
+      "check": "monotonic_receipt_reconciliation"
+    },
+    {
+      "id": "reply-before-reminder-optout",
+      "package": "correspondence",
+      "phase": 2,
+      "check": "audience_removed_and_no_send"
+    },
+    {
+      "id": "multiple-vendors-revisions",
+      "package": "live-operations",
+      "phase": 1,
+      "check": "all_quotes_exact_money_and_source_lineage"
+    },
+    {
+      "id": "sourced-research-constraints",
+      "package": "live-operations",
+      "phase": 1,
+      "check": "each_candidate_verdict_and_citations"
+    },
+    {
+      "id": "agenda-overlap",
+      "package": "live-operations",
+      "phase": 1,
+      "check": "independent_interval_overlap"
+    },
+    {
+      "id": "checkin-future-dependency",
+      "package": "live-operations",
+      "phase": 1,
+      "check": "unknown_until_source_release"
+    },
+    {
+      "id": "vendor-delay-targeted-update",
+      "package": "live-operations",
+      "phase": 2,
+      "check": "exact_affected_recipient_content_journal"
+    },
+    {
+      "id": "incident-activity-cancellation",
+      "package": "live-operations",
+      "phase": 2,
+      "check": "incident_records_and_updated_schedule"
+    },
+    {
+      "id": "private-checkin",
+      "package": "live-operations",
+      "phase": 2,
+      "check": "no_code_in_general_digest_or_send"
+    },
+    {
+      "id": "fresh-session-recovery",
+      "package": "full-weekend",
+      "phase": 2,
+      "check": "snapshots_and_canonical_facts"
+    },
+    {
+      "id": "host-usability",
+      "package": "all",
+      "phase": "all",
+      "check": "mandatory_independent_artifact_review"
+    }
+  ],
+  "not_covered": [
+    "Actual delivery/booking/payment",
+    "Adversarial OS sandbox escape",
+    "Simultaneous cohost writes",
+    "Every attachment format",
+    "Every provider or harness",
+    "Human host acceptance"
+  ]
+}

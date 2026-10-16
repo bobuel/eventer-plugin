@@ -1,0 +1,5 @@
+{
+  "g01": "g01@example.test",
+  "g02": "bounced@example.test",
+  "note": "g02 email in original CSV is superseded for this scenario by host source contact-map."
+}

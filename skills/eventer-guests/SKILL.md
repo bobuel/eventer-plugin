@@ -31,6 +31,13 @@ rides, and message approvals for review. Deduplicate by source identity and clai
 Present unresolved identities or ambiguous dates with a concise clarification draft.
 Never confirm a new plus-one automatically. Use communications for actual outreach.
 
+An attendance decline and a request to stop contact are separate changes. When a
+verified guest opts out, persist the opt-out in the contact record with its source,
+remove them from queued reminder audiences, and read back both records. An empty
+reminder list alone does not preserve the preference for a future session. Keep
+the opt-out until the guest explicitly changes it; never infer consent from a
+later attendance update.
+
 ## Operating contract
 
 Read [the shared operating contract](../eventer/references/operating-contract.md)

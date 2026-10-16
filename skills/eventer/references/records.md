@@ -1,5 +1,9 @@
 # Event records
 
+Write durable JSON, JSONL and Markdown as UTF-8 explicitly, including on Windows.
+Read back saved files with that encoding before reporting completion. Check that
+every source reference resolves, including receipt IDs used by blockers or notices.
+
 Keep `brief.md`, `event.json`, `evidence/`, `proposals/`, `decisions.jsonl`,
 `communications.jsonl`, and `summary.md` in a private event folder. Create only what
 the event currently needs. These are working artifacts, not an installed database.
