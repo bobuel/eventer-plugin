@@ -1,0 +1,35 @@
+{
+  "source_commit": "a8b1fc12d9eacc39dab6e43acc187e039e89885a",
+  "executed_at": "2026-10-16T02:34:58.325941+00:00",
+  "source": "https://github.com/bobuel/eventer-plugin",
+  "clients": {
+    "codex": {
+      "public_marketplace_add": "passed",
+      "install_enabled_readback": "passed",
+      "uninstall_empty_readback": "passed",
+      "reinstall_enabled_readback": "passed",
+      "version": "0.1.0",
+      "skill_files_byte_compared": 38,
+      "installed_helper_quote_total": "131.70"
+    },
+    "claude": {
+      "public_marketplace_add": "passed",
+      "install_enabled_readback": "passed",
+      "uninstall_empty_readback": "passed",
+      "reinstall_enabled_readback": "passed",
+      "version": "0.1.0",
+      "skill_files_byte_compared": 38,
+      "installed_helper_quote_total": "131.70"
+    }
+  },
+  "fresh_public_clone": {
+    "offline_tests_passed": 87,
+    "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35"
+  },
+  "github_actions": {
+    "url": "https://github.com/bobuel/eventer-plugin/actions/runs/38840848041",
+    "windows": "success",
+    "linux": "success",
+    "macos": "success"
+  }
+}

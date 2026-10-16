@@ -6,13 +6,13 @@ Claude model behavior and other harness behavior are outside the verified scope.
 
 | Area | Observed result |
 |---|---|
-| Offline domain, helper, installer, package and grader tests | 87 passed on Windows, Python 3.12 |
+| Offline domain, helper, installer, package and grader tests | 87 passed locally, in a fresh public clone, and in Windows/Linux/macOS CI; Python 3.12 |
 | Codex RSVP extraction | 12/12 clear and 6/6 ambiguous cases passed |
 | Codex skill behavior | 24/24 cases passed |
 | Codex critical behavior | 14/14 cases in each of three runs; zero critical failures under the corrected grader |
 | Codex integrated journey | Initial 13 artifacts and fresh-session 14-artifact correction passed |
-| Codex native installation | Marketplace add, install and enabled readback passed in isolated configuration |
-| Claude Code native installation | Manifest validation, marketplace add, install and enabled readback passed in isolated configuration |
+| Codex native installation | Public GitHub marketplace add, install, removal, reinstall and readback passed in isolated configuration; installed helper executed |
+| Claude Code native installation | Manifest validation and public GitHub marketplace add, install, removal, reinstall and readback passed in isolated configuration; installed helper executed |
 | Cursor, Copilot, Gemini CLI, OpenCode | Portable installer and documented skill directories; no model runs claimed |
 | External delivery, bookings or unattended real actions | Not performed; evaluation actions used fake adapters |
 | Human owner acceptance | Not claimed |
@@ -40,6 +40,9 @@ evidence, changed rooming/meal counts and no named private requirements in the
 guest digest. Selected actual synthetic output is in
 [examples/completed](../examples/completed).
 
-GitHub Actions runs the offline suite on Linux, Windows and macOS. See the
-[public workflow runs](https://github.com/bobuel/eventer-plugin/actions) for exact
+GitHub Actions passed the offline suite on Linux, Windows and macOS for
+[the implementation commit](https://github.com/bobuel/eventer-plugin/actions/runs/38840848041).
+Every installed skill file in both clients matched the published source byte for
+byte. See [public installation evidence](../evals/reports/public-installation.json)
+and [workflow runs](https://github.com/bobuel/eventer-plugin/actions) for exact
 commit results. The original Eventer service, deployment and data are unchanged.
