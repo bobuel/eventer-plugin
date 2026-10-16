@@ -1,0 +1,8 @@
+{
+  "event": "event",
+  "sources": "sources",
+  "destination": "export/event",
+  "manifest": "export-manifest.json",
+  "restore_to": "restored/event",
+  "retention_days": null
+}

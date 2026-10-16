@@ -13,7 +13,8 @@ you choose. Existing model and connected-service charges still apply.
 
 ## Start here
 
-Claude Code: `/plugin install eventer --marketplace bobuel/eventer-plugin`
+In Claude Code, add the marketplace with `/plugin marketplace add bobuel/eventer-plugin`,
+then install with `/plugin install eventer@eventer-plugins`.
 
 Install with [the instructions for your harness](docs/installation.md), then ask:
 
@@ -61,7 +62,8 @@ python -B skills/eventer/scripts/eventer.py rooming --input examples/inputs/room
 python -B skills/eventer/scripts/eventer.py quote-diff --input examples/inputs/quote-diff.json
 ```
 
-Helpers read JSON and return proposals or validation results. They do not contact
+Planning helpers read JSON and return proposals or validation results. The archive
+helper also creates explicitly requested, verified local copies. They do not contact
 providers, send messages, book transport, or make payments. See the
 [input contracts](skills/eventer/references/helpers.md) and
 [synthetic complete journey](examples/journey/request.md).

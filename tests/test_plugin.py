@@ -19,7 +19,14 @@ def example(operation):
 
 
 @pytest.mark.parametrize('operation', eventer.OPERATIONS)
-def test_every_documented_helper_accepts_its_working_example(operation):
+def test_every_documented_helper_accepts_its_working_example(operation,tmp_path,monkeypatch):
+    if operation in {'audit-records','archive'}:
+        monkeypatch.chdir(tmp_path)
+        (tmp_path/'event/evidence').mkdir(parents=True)
+        (tmp_path/'event/event.json').write_text(json.dumps(example('validate')),encoding='utf-8')
+        (tmp_path/'event/evidence/index.json').write_text('[]',encoding='utf-8')
+        (tmp_path/'sources').mkdir()
+        (tmp_path/'sources/host.txt').write_text('Synthetic host source',encoding='utf-8')
     assert eventer.run(operation, example(operation)) is not None
 
 

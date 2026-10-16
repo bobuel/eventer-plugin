@@ -277,6 +277,16 @@ def test_recorder_fails_closed_for_malformed_helper_output(tmp_path, phase1_base
     assert row["output"]["ok"] is False
 
 
+def test_rejected_send_input_does_not_count_as_an_extra_submission(tmp_path,phase1_baseline):
+    _,source_run=phase1_baseline
+    workspace,run=copy_phase1_baseline(source_run,tmp_path/'rejected-send')
+    put(workspace/'inputs/rejected.json',{'recipient':'g01@example.test','content':'Test'})
+    result=subprocess.run([sys.executable,'-B',str(workspace/'tools.py'),'mail.send','--input','inputs/rejected.json'],
+                          cwd=workspace,capture_output=True,text=True)
+    assert result.returncode==2
+    assert graded(run)['automated_passed']
+
+
 def test_receipt_evidence_must_match_actual_observed_tool_output(tmp_path,phase1_baseline):
     _,source_run=phase1_baseline
     workspace,run=copy_phase1_baseline(source_run,tmp_path/'receipt-source')

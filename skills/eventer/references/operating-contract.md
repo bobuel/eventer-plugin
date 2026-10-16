@@ -29,7 +29,9 @@ background worker, account, payment system, or authority of its own.
 
 Before writing event.json, read [records](records.md) and preserve its field names
 and stable guest IDs. Validate the saved event with the `validate` helper. Before
-constructing a helper input, read [helpers](helpers.md); do not guess its schema.
+reporting records complete, run `audit-records` on their saved evidence index and
+resolve its issues. A successful command with `valid: false` still requires repair.
+Before constructing a helper input, read [helpers](helpers.md); do not guess its schema.
 If a local helper rejects an input, inspect the contract, correct the input and
 rerun it. Save the actual successful result, retaining error evidence where useful.
 An uncorrected validation failure means that artifact is incomplete.

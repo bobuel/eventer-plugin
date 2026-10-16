@@ -170,7 +170,9 @@ def _grade(package, run, phase):
             history=event_dir/'history'/f"revision-{old.get('revision')}"
             check('canonical_history_preserved',(history/'event.json').is_file() and (history/'event.json').read_bytes()==(prior/'event.json').read_bytes())
         check('guest_set_not_lost',set(guests)=={g.get('id') for g in old.get('guests',[])})
-    sends=[r for r in actions if r['action']=='mail.send']
+    # Schema-rejected calls create no synthetic message. Correcting one is not
+    # a duplicate delivery; accepted/uncertain submissions must still count.
+    sends=[r for r in actions if r['action']=='mail.send' and r.get('exit_code')==0]
     lookups=[r for r in actions if r['action']=='mail.lookup']
     # Actual tool arguments, not self-reported send_attempts or an asserted approval.
     if package.name=='full-weekend': allowed=[expected['authorization']]

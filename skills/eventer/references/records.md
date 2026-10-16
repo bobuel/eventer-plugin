@@ -20,6 +20,11 @@ separately until a task requires and obtains a precise interval.
 Evidence entries: id, event_id, source_type, source_reference, received_at, actor,
 authority, exact excerpt, sensitivity. Raw source files remain private. Claims
 reference evidence; excerpt matching alone does not prove semantic support.
+Use `exact_excerpt` for the quoted text. Reuse a supplied `source_id` verbatim as
+the evidence `id`, including when correcting attendance. Index a structured
+document's original source id before adding more granular citations. Renaming a
+source breaks continuity with later replies and corrections. Run `audit-records`
+on saved records and resolve its issues before reporting the update complete.
 
 Structured RSVP claim: guest_id, field (attendance/requirement/plus_one),
 evidence_span, source_id; attendance adds status, arrival_day, departure_day,

@@ -89,6 +89,12 @@ def run(operation, data):
         raise ValueError('Input must be a JSON object')
     if operation == 'validate':
         return validate_event(data)
+    if operation == 'audit-records':
+        from record_audit import audit_records
+        return audit_records(**data)
+    if operation == 'archive':
+        from archive import archive_event
+        return archive_event(**data)
     if operation == 'rooming':
         return rooming(data)
     if operation == 'meals':
@@ -165,7 +171,7 @@ def run(operation, data):
     raise ValueError(f'Unknown operation: {operation}')
 
 
-OPERATIONS = ('validate', 'rooming', 'meals', 'quote', 'quote-extract', 'quote-diff', 'balance',
+OPERATIONS = ('validate', 'audit-records', 'archive', 'rooming', 'meals', 'quote', 'quote-extract', 'quote-diff', 'balance',
               'research', 'local-time', 'audience', 'transport', 'schedule-check', 'fingerprint')
 
 

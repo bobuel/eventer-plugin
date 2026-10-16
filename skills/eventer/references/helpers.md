@@ -10,7 +10,9 @@ Use Python 3.12+; install `tzdata` if the OS lacks IANA timezone data (notably
 Windows). `-B` avoids writing caches into a read-only plugin installation. JSON
 can also be piped to stdin. Output is `{ok: true, result: ...}`; failures exit 2
 with `{ok: false, error, message}` on stderr. Output paths must be new files.
-No network calls, credential reads, state commits or external actions occur.
+No network calls, credential reads or external actions occur. `archive` writes
+only explicitly selected new local export/restore destinations; other operations
+do not commit event state.
 The complete collection must be installed together; other skills use this helper.
 Read the relevant input contract before calling a helper. Use its exact field
 names. A rejected input is repairable local work, not a completed calculation.
@@ -18,6 +20,8 @@ names. A rejected input is repairable local work, not a completed calculation.
 | Operation | JSON input | Result |
 |---|---|---|
 | validate | event.json from setup template | Structural validation, not proof of truth |
+| audit-records | workspace (absolute path), event (workspace-relative directory, default event) | Saved source identity, excerpt, reference and sensitivity issues; inspect valid and issues |
+| archive | event, destination, manifest; optional sources, restore_to, retention_days | Verified new export/restore and exact hash manifest; refuses existing destinations |
 | rooming | starts_on, ends_on, timezone, guests, beds, constraints; optional locked, fill_unlocked | Assignments, demand, violations, unassigned guests |
 | meals | meal, guests, overrides, profiles, needs, accommodations, requirements | Counts and coverage, including unknowns |
 | quote | currency, items, tax, fees; optional documented terms | Exact-decimal normalized quote |
@@ -86,3 +90,19 @@ helper fields. For balance, supply `currency`, `total` and `payments`, for examp
 `{"currency":"USD","total":"35.00","payments":[{"id":"receipt-1","currency":"USD","amount":"10.00"}]}`.
 Deduplicate repeated copies of a receipt by its transaction ID before calculation;
 retain both source references. Different transactions must retain different IDs.
+
+## Saved records and portable exports
+
+`audit-records` reads existing files. Example input:
+`{"workspace":"/absolute/path/to/my-weekend","event":"event"}`.
+An `ok` envelope means the check ran; only `result.valid: true` means no structural
+issues were found. It does not establish that a speaker is authorized or a claim
+is true. Review those against the original evidence.
+
+For a requested export, finish the event files first, then use `archive` with
+explicit paths, for example:
+`{"event":"event","sources":"sources","destination":"export/event","manifest":"export-manifest.json","restore_to":"restored/event","retention_days":30}`.
+Paths resolve from the current working directory. Retention is the host's choice;
+omit it when unknown. This creates new copies and a manifest without deleting the
+originals. Do not save another artifact inside the event after archiving and then
+claim the export contains that change. Choose new destinations for a later export.
