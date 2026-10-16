@@ -1,0 +1,18 @@
+{
+  "plugin_version": "0.1.0",
+  "codex_cli": "0.162.0-alpha.17.2",
+  "claude_code": "2.1.301",
+  "codex": {
+    "marketplace_add": "passed",
+    "install": "passed",
+    "list_enabled": true
+  },
+  "claude": {
+    "manifest_validation": "passed",
+    "marketplace_add": "passed",
+    "install": "passed",
+    "list_enabled": true
+  },
+  "scope": "Clean local archive, isolated client configuration. Public-source readback recorded separately.",
+  "claude_model_evaluation": "not run: no authenticated Claude session; owner requested best available verification without waiting for login"
+}

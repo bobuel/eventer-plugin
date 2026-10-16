@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "event_id": "synthetic-weekend",
+  "revision": 0,
+  "name": "Synthetic operations weekend",
+  "timezone": "America/New_York",
+  "starts_on": "2030-10-04",
+  "ends_on": "2030-10-06",
+  "host": {
+    "name": "Host",
+    "authority": "host"
+  },
+  "capabilities": {},
+  "guests": [
+    {
+      "id": "alex",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 17:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00",
+      "name": "Alex",
+      "precision": "exact_time",
+      "evidence_ids": [
+        "host-synthetic-input"
+      ]
+    },
+    {
+      "id": "blair",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 18:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00",
+      "name": "Blair",
+      "precision": "exact_time",
+      "evidence_ids": [
+        "host-synthetic-input"
+      ]
+    },
+    {
+      "id": "casey",
+      "household_id": null,
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-05 12:00:00-04:00",
+      "departure": "2030-10-06 09:00:00-04:00",
+      "name": "Casey",
+      "precision": "exact_time",
+      "evidence_ids": [
+        "host-synthetic-input"
+      ]
+    },
+    {
+      "id": "devon",
+      "household_id": null,
+      "rsvp_status": "unknown",
+      "truth_state": "unknown",
+      "arrival": null,
+      "departure": null,
+      "name": "Devon",
+      "precision": "unknown",
+      "evidence_ids": []
+    }
+  ],
+  "requirements": [],
+  "unresolved": []
+}

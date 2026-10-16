@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "event_timezone": "America/New_York",
+  "starts_on": "2026-09-11",
+  "ends_on": "2026-09-13",
+  "buildings": [
+    {"key": "main", "name": "Main Lodge", "rooms": [
+      {"key": "accessible", "name": "Ground Room", "floor": 0, "accessible": true, "quiet": true, "beds": [{"key": "queen", "label": "Queen", "bed_type": "queen", "capacity": 2, "shareable": true}]},
+      {"key": "twin", "name": "Twin Room", "floor": 1, "accessible": false, "quiet": false, "beds": [{"key": "twin-a", "label": "Twin A", "bed_type": "twin", "capacity": 1, "shareable": false}, {"key": "twin-b", "label": "Twin B", "bed_type": "twin", "capacity": 1, "shareable": false}]}
+    ]},
+    {"key": "cottage", "name": "Cottage", "rooms": [
+      {"key": "garden", "name": "Garden Room", "floor": 0, "accessible": false, "quiet": true, "beds": [{"key": "double", "label": "Double", "bed_type": "double", "capacity": 2, "shareable": true}]}
+    ]}
+  ],
+  "guests": [
+    {"key": "alex", "household": "h1", "arrival": "2026-09-11T17:00:00-04:00", "departure": "2026-09-13T10:00:00-04:00", "requirements": ["own_bed"]},
+    {"key": "blair", "household": "h1", "arrival": "2026-09-11T18:00:00-04:00", "departure": "2026-09-13T10:00:00-04:00", "requirements": []},
+    {"key": "casey", "household": null, "arrival": "2026-09-12T12:00:00-04:00", "departure": "2026-09-13T09:00:00-04:00", "requirements": ["accessible"]},
+    {"key": "devon", "household": null, "arrival": null, "departure": null, "requirements": []}
+  ]
+}

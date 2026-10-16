@@ -1,0 +1,23 @@
+{
+  "fixture_version": 1,
+  "synthetic": true,
+  "timezone": "America/New_York",
+  "starts_on": "2030-10-04",
+  "ends_on": "2030-10-07",
+  "guests": [
+    {"key": "alex", "household": "family", "arrival": "2030-10-04T16:00:00-04:00", "departure": "2030-10-07T09:00:00-04:00"},
+    {"key": "blair", "household": "family", "arrival": "2030-10-04T18:00:00-04:00", "departure": "2030-10-06T10:00:00-04:00"},
+    {"key": "casey", "household": null, "arrival": "2030-10-05T12:00:00-04:00", "departure": "2030-10-07T08:00:00-04:00"},
+    {"key": "devon", "household": null, "arrival": null, "departure": null},
+    {"key": "eris", "household": null, "arrival": null, "departure": null}
+  ],
+  "inventory": [
+    {"building": "Main lodge", "room": "Ground floor", "bed": "Accessible twin", "bed_type": "twin", "floor": 0, "accessible": true, "capacity": 1, "shareable": false, "available_from": "2030-10-04", "available_until": "2030-10-06"},
+    {"building": "Main lodge", "room": "Upstairs", "bed": "Twin A", "bed_type": "twin", "floor": 1, "accessible": false, "capacity": 1, "shareable": false},
+    {"building": "Main lodge", "room": "Upstairs", "bed": "Twin B", "bed_type": "twin", "floor": 1, "accessible": false, "capacity": 1, "shareable": false},
+    {"building": "Cottage", "room": "Garden", "bed": "Shared queen", "bed_type": "queen", "floor": 0, "accessible": false, "capacity": 2, "shareable": true}
+  ],
+  "meal": {"name": "Saturday dinner", "service_start": "2030-10-05T18:00:00-04:00", "service_end": "2030-10-05T20:00:00-04:00", "location": "Main lodge", "final_count_deadline": "2030-10-04T12:00:00-04:00"},
+  "ambiguous_reply": "We will probably make it for most of the weekend.",
+  "expected": {"initial_assignments": 7, "initial_dinner_confirmed": 3, "unknown_rsvps": ["devon", "eris"], "changed_arrival": "2030-10-06T12:00:00-04:00"}
+}

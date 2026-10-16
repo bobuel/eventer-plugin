@@ -1,0 +1,59 @@
+{
+  "meal": {
+    "service_start": "2030-10-05T18:00:00-04:00",
+    "service_end": "2030-10-05T20:00:00-04:00",
+    "timezone": "America/New_York",
+    "status": "planning",
+    "serving_categories": [
+      "adult",
+      "child"
+    ]
+  },
+  "guests": [
+    {
+      "id": "alex",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 17:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00",
+      "name": "Alex",
+      "precision": "exact_time"
+    },
+    {
+      "id": "blair",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 18:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00",
+      "name": "Blair",
+      "precision": "exact_time"
+    },
+    {
+      "id": "casey",
+      "household_id": null,
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-05 12:00:00-04:00",
+      "departure": "2030-10-06 09:00:00-04:00",
+      "name": "Casey",
+      "precision": "exact_time"
+    },
+    {
+      "id": "devon",
+      "household_id": null,
+      "rsvp_status": "unknown",
+      "truth_state": "unknown",
+      "arrival": null,
+      "departure": null,
+      "name": "Devon",
+      "precision": "unknown"
+    }
+  ],
+  "overrides": [],
+  "profiles": [],
+  "needs": [],
+  "accommodations": [],
+  "requirements": []
+}

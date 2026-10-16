@@ -1,0 +1,9 @@
+{
+  "suite": "offline",
+  "passed": true,
+  "skill_hash": "8a9263df340289423b909ebc1f53c00515a29fab2658e46de3033269920f9f7f",
+  "executed_at": "2026-10-16T02:25:24.824086+00:00",
+  "model_evaluation": false,
+  "passed_count": 87,
+  "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35"
+}

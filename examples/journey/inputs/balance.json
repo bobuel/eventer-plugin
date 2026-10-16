@@ -1,0 +1,11 @@
+{
+  "currency": "USD",
+  "total": "131.70",
+  "payments": [
+    {
+      "id": "deposit",
+      "currency": "USD",
+      "amount": "20.00"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "source_commit": "ba3e1d0e7347a0a7782146230403c23c09785a88",
+  "cases": [
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_fixture_determinism_hard_safety_and_boundary_nights",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_fixture_determinism_hard_safety_and_boundary_nights"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_locks_incompatibility_and_infeasibility",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_locks_incompatibility_and_infeasibility"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_malicious_notes_never_become_constraints",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_malicious_notes_never_become_constraints"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_household_grouping_feasible_and_explicitly_unmet",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_household_grouping_feasible_and_explicitly_unmet"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_inventory_preview_row_errors",
+      "status": "service-only",
+      "target": null
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_availability_and_dst_boundary_night",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_availability_and_dst_boundary_night"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_100_guest_budget",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_100_guest_budget"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_invalid_constraint_type_rejected",
+      "status": "adapted",
+      "target": "tests/test_rooming_engine.py::test_invalid_constraint_type_rejected"
+    },
+    {
+      "source": "tests/unit/test_rooming_engine.py::test_publish_guardrail_cannot_be_automatic",
+      "status": "service-only",
+      "target": null
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_arrival_and_departure_boundaries_use_declared_window",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_arrival_and_departure_boundaries_use_declared_window"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_dst_offset_conversion_and_uncertain_dates",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_dst_offset_conversion_and_uncertain_dates"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_explicit_responses_override_and_preserve_evidence",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_explicit_responses_override_and_preserve_evidence"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_unknowns_never_covered_and_serving_category_never_inferred",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_unknowns_never_covered_and_serving_category_never_inferred"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_coverage_states_and_allergy_is_not_a_preference",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_coverage_states_and_allergy_is_not_a_preference"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_unmapped_gate_a_requirement_is_visible_even_if_no_needs_answer",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_unmapped_gate_a_requirement_is_visible_even_if_no_needs_answer"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_repeated_requirement_category_counts_each_guest_once",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_repeated_requirement_category_counts_each_guest_once"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_cancelled_meal_does_not_count_explicit_optin",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_cancelled_meal_does_not_count_explicit_optin"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_count_is_stable_under_permutation_and_100_guest_benchmark",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_count_is_stable_under_permutation_and_100_guest_benchmark"
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_agent_cannot_self_approve_menu_evidence",
+      "status": "service-only",
+      "target": null
+    },
+    {
+      "source": "tests/unit/test_meal_engine.py::test_naive_timestamp_rejected",
+      "status": "adapted",
+      "target": "tests/test_meal_engine.py::test_naive_timestamp_rejected"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_decimal_typo_and_semantic_diff_are_visible",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_decimal_typo_and_semantic_diff_are_visible"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_financial_input_never_uses_float_or_truncation",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_financial_input_never_uses_float_or_truncation"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_unknowns_and_cross_currency_are_never_invented",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_unknowns_and_cross_currency_are_never_invented"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_injected_source_is_proposal_only_with_exact_spans",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_injected_source_is_proposal_only_with_exact_spans"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_duplicate_tax_and_unsupported_attachment_remain_unknown",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_duplicate_tax_and_unsupported_attachment_remain_unknown"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_source_span_is_required_for_every_extracted_field",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_source_span_is_required_for_every_extracted_field"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_decimal_quantity_rounds_once_and_dates_require_offsets",
+      "status": "adapted",
+      "target": "tests/test_vendor_engine.py::test_decimal_quantity_rounds_once_and_dates_require_offsets"
+    },
+    {
+      "source": "tests/unit/test_vendor_engine.py::test_api_rejects_unknown_authority_and_float_amounts",
+      "status": "service-only",
+      "target": null
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_local_time_dst_fold_roundtrip_and_gap_rejection",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_local_time_dst_fold_roundtrip_and_gap_rejection"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_audience_requires_full_confirmed_interval_and_honors_optouts",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_audience_requires_full_confirmed_interval_and_honors_optouts"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_ride_capacity_and_deterministic_waitlist",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_ride_capacity_and_deterministic_waitlist"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_ride_rejects_missing_permission_or_unavailable_passenger",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_ride_rejects_missing_permission_or_unavailable_passenger"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_ride_accessibility_and_child_seats_are_hard_constraints",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_ride_accessibility_and_child_seats_are_hard_constraints"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_ride_driver_vehicle_guest_overlaps_and_buffers",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_ride_driver_vehicle_guest_overlaps_and_buffers"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_research_freshness_and_explicit_disqualifiers",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_research_freshness_and_explicit_disqualifiers"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_research_rejects_unsafe_source_urls",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_research_rejects_unsafe_source_urls"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_fake_research_failure_and_no_guest_queries",
+      "status": "adapted",
+      "target": "tests/test_schedule_engines.py::test_fake_research_failure_and_no_guest_queries"
+    },
+    {
+      "source": "tests/unit/test_schedule_engines.py::test_api_rejects_unknown_authority_and_unbounded_inputs",
+      "status": "service-only",
+      "target": null
+    }
+  ],
+  "behavioral_adaptations": [
+    "RSVP clear and ambiguous dataset",
+    "Gate B/C whole-event journey",
+    "approval substitution",
+    "uncertain send recovery",
+    "private guest digest",
+    "fresh-session resume"
+  ],
+  "new": [
+    "skill routing",
+    "missing integrations",
+    "scheduler readback/cancel",
+    "portable installation lifecycle"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "eventer",
+  "version": "0.1.0",
+  "description": "Coordinate group events with evidence-backed skills, local planning helpers, and your existing tools.",
+  "author": {
+    "name": "bobuel"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/bobuel/eventer-plugin"
+}

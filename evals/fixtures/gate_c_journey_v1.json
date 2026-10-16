@@ -1,0 +1,12 @@
+{
+  "fixture_version": "gate-c-v1",
+  "synthetic": true,
+  "event": {"name": "Synthetic operations weekend", "timezone": "America/New_York", "starts_on": "2026-11-06", "ends_on": "2026-11-08"},
+  "guest_cases": ["household-a", "household-b", "partial-stay", "unknown", "activity-opt-out", "access-needed"],
+  "vendor": {"name": "Synthetic Caterer", "email": "caterer@example.test", "currency": "USD", "quote_unit_prices": ["212.95", "21.95"], "quantity": 6, "manual_deposit": "20.00", "source_note": "Synthetic quote correction; host-entered test evidence"},
+  "schedule": {"name": "Synthetic welcome dinner", "starts_at": "2026-11-06T18:00:00-05:00", "ends_at": "2026-11-06T19:00:00-05:00", "audience": "confirmed_present"},
+  "research": [{"name": "Synthetic accessible option", "source_url": "https://example.test/access", "accessible": true}, {"name": "Synthetic stairs-only option", "source_url": "https://example.test/stairs", "accessible": false}],
+  "transport": {"name": "Synthetic shuttle", "passenger_seats": 2, "requested_passengers": 3},
+  "live": {"delay_minutes": 30, "incident": "Synthetic delivery delayed; host contacted vendor"},
+  "commercial": {"invoice_reference": "SYNTHETIC-NO-PAYMENT-001", "real_invoice": false}
+}

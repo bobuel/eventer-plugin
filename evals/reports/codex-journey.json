@@ -1,0 +1,84 @@
+{
+  "harness": "codex",
+  "suite": "journey",
+  "skill_hash": "a1c2de79cabbf2cf93f39f3ea746bcb9e4a5114d79ee0c0345896621c98afcae",
+  "executed_at": "2026-10-16T02:03:57.760693+00:00",
+  "results": [
+    {
+      "repeat": 1,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 166.641366,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 282670,
+          "cached_input_tokens": 226176,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5831,
+          "reasoning_output_tokens": 33
+        },
+        "resume": {
+          "harness_version": "codex-cli 0.162.0-alpha.17.2",
+          "exit_code": 0,
+          "elapsed_seconds": 191.302772,
+          "model": "harness default; not exposed by this CLI transcript",
+          "usage": {
+            "input_tokens": 249991,
+            "cached_input_tokens": 217856,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 7720,
+            "reasoning_output_tokens": 48
+          }
+        },
+        "initial_event_revision": 1
+      },
+      "grade": {
+        "passed": true,
+        "initial": {
+          "passed": true,
+          "failures": [],
+          "artifact_count": 13,
+          "manual_review_required": [
+            "readability",
+            "source-grounding",
+            "appropriate next actions"
+          ]
+        },
+        "resume": {
+          "passed": true,
+          "failures": [],
+          "artifact_count": 14,
+          "manual_review_required": [
+            "readability",
+            "source-grounding",
+            "appropriate next actions"
+          ]
+        }
+      }
+    }
+  ],
+  "passed": true,
+  "limits": "Synthetic tools only; native installation is verified separately. Human artifact review remains separate.",
+  "grader_revision_note": "Regraded saved artifacts: compare resumed revision to the actual baseline, and verify impact through changed facts and helper outputs rather than prose keywords. Original initial phase passed. No model output was altered.",
+  "human_review": {
+    "reviewer": "implementing agent",
+    "owner_acceptance": false,
+    "artifacts_reviewed": [
+      "summary.md",
+      "change-review.md",
+      "digest.md",
+      "mock-state.json"
+    ],
+    "observations": [
+      "Arrival correction grounded in the verified self-report; previous evidence retained.",
+      "Rooming changed from five to four assignments; meal confirmed count from three to two.",
+      "One mock send, one reconciliation lookup, no duplicate; acceptance distinguished from delivery.",
+      "Cancelled schedule was not recreated in the fresh session.",
+      "Guest digest excludes named allergy and mobility information.",
+      "Host summary gives concrete unresolved decisions without claiming bookings or payments."
+    ]
+  },
+  "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35",
+  "hash_note": "Original skill_hash retained. canonical_skill_hash uses POSIX path ordering and LF-normalized bytes; every source skill file was compared with the evaluated installed snapshot."
+}

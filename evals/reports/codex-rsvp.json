@@ -1,0 +1,127 @@
+{
+  "harness": "codex",
+  "suite": "rsvp",
+  "skill_hash": "a1c2de79cabbf2cf93f39f3ea746bcb9e4a5114d79ee0c0345896621c98afcae",
+  "executed_at": "2026-10-16T01:58:04.559708+00:00",
+  "results": [
+    {
+      "repeat": 1,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 46.123799,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 54437,
+          "cached_input_tokens": 47616,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1973,
+          "reasoning_output_tokens": 83
+        }
+      },
+      "grade": {
+        "passed": true,
+        "clear_passed": 12,
+        "clear_total": 12,
+        "ambiguous_passed": 6,
+        "ambiguous_total": 6,
+        "cases": [
+          {
+            "id": "clear-1",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-2",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-3",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-4",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-5",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-6",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-7",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-8",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-9",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-10",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-11",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "clear-12",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-1",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-2",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-3",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-4",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-5",
+            "passed": true,
+            "failures": []
+          },
+          {
+            "id": "ambiguous-6",
+            "passed": true,
+            "failures": []
+          }
+        ]
+      }
+    }
+  ],
+  "passed": true,
+  "limits": "Synthetic tools only; native installation is verified separately. Human artifact review remains separate.",
+  "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35",
+  "hash_note": "Original skill_hash retained. canonical_skill_hash uses POSIX path ordering and LF-normalized bytes; every source skill file was compared with the evaluated installed snapshot."
+}

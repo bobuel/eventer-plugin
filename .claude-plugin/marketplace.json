@@ -1,0 +1,16 @@
+{
+  "name": "eventer-plugins",
+  "owner": {
+    "name": "bobuel"
+  },
+  "plugins": [
+    {
+      "name": "eventer",
+      "source": "./",
+      "description": "Coordinate group events with evidence-backed skills, local planning helpers, and your existing tools."
+    }
+  ],
+  "metadata": {
+    "description": "Portable event-operation skills and offline planning helpers."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "guests": [
+    {"id": "unknown", "rsvp_status": "unknown", "has_dates": false, "rooming_unresolved": false, "meal_state": "unknown", "dietary_unresolved": true},
+    {"id": "dates", "rsvp_status": "confirmed", "has_dates": false, "rooming_unresolved": false, "meal_state": "possible", "dietary_unresolved": true},
+    {"id": "stay", "rsvp_status": "confirmed", "has_dates": true, "rooming_unresolved": true, "meal_state": "confirmed", "dietary_unresolved": false},
+    {"id": "diet", "rsvp_status": "confirmed", "has_dates": true, "rooming_unresolved": false, "meal_state": "confirmed", "dietary_unresolved": true},
+    {"id": "absent", "rsvp_status": "confirmed", "has_dates": true, "rooming_unresolved": false, "meal_state": "absent", "dietary_unresolved": true},
+    {"id": "declined", "rsvp_status": "declined", "has_dates": false, "rooming_unresolved": true, "meal_state": "unknown", "dietary_unresolved": true}
+  ],
+  "expected": {
+    "unanswered_rsvp": ["unknown"],
+    "missing_dates": ["dates"],
+    "rooming_clarification": ["stay"],
+    "meal_attendance": ["unknown", "dates"],
+    "dietary_confirmation": ["unknown", "dates", "diet"]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "resolved": [
+    {
+      "finding": "Initial Codex CLI configuration lacked Windows sandbox selection.",
+      "resolution": "Retained the normal elevated Windows sandbox explicitly; no sandbox bypass."
+    },
+    {
+      "finding": "RSVP run: 11/12 clear and 6/6 ambiguous; ordinary dietary sensitivity classification differed.",
+      "resolution": "Clarified domain classification while preserving private audience rules; subsequent run passed 12/12 and 6/6."
+    },
+    {
+      "finding": "Behavior run: 19/24 exact-contract checks; unspecified names/types produced false failures.",
+      "resolution": "Specified output field types and category vocabularies without supplying expected answers; subsequent run passed 24/24."
+    },
+    {
+      "finding": "Journey resume grader assumed a fixed revision and searched prose keywords.",
+      "resolution": "Checks now compare the actual previous revision and inspect facts/derived artifacts. Saved outputs regraded without model rerun or modification."
+    },
+    {
+      "finding": "Critical grader rejected equivalent uncovered/unknown states and USD-prefixed balances.",
+      "resolution": "Accepted equivalent states and exact USD amounts, with negative tests for covered, wrong currency and wrong amount. All three saved responses regraded; original grades retained."
+    }
+  ],
+  "not_claimed": [
+    "Claude model behavior",
+    "behavior on other harnesses",
+    "real external provider delivery",
+    "human owner acceptance"
+  ]
+}

@@ -1,0 +1,628 @@
+{
+  "harness": "codex",
+  "suite": "critical",
+  "skill_hash": "a1c2de79cabbf2cf93f39f3ea746bcb9e4a5114d79ee0c0345896621c98afcae",
+  "executed_at": "2026-10-16T02:24:54.762143+00:00",
+  "results": [
+    {
+      "repeat": 1,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 54.574284,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 140209,
+          "cached_input_tokens": 121344,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1510,
+          "reasoning_output_tokens": 18
+        }
+      },
+      "grade": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 14,
+        "total": 14,
+        "critical_failures": 0
+      },
+      "original_grade": {
+        "passed": false,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "accommodation_state"
+            ]
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "outstanding_balance"
+            ]
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 12,
+        "total": 14,
+        "critical_failures": 2
+      },
+      "response_sha256": "a33ac052dcd97f901da98fcf380b92cabeed2d12eeac84fecb3903c13e5c97ef"
+    },
+    {
+      "repeat": 2,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 96.296176,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 168540,
+          "cached_input_tokens": 148352,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1724,
+          "reasoning_output_tokens": 67
+        }
+      },
+      "grade": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 14,
+        "total": 14,
+        "critical_failures": 0
+      },
+      "original_grade": {
+        "passed": false,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "accommodation_state"
+            ]
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "outstanding_balance"
+            ]
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 12,
+        "total": 14,
+        "critical_failures": 2
+      },
+      "response_sha256": "af32da927fc04ddde5935b6f310569a66427c1e645d7fa50bad9e0db1fab4691"
+    },
+    {
+      "repeat": 3,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 57.35318,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 146229,
+          "cached_input_tokens": 120832,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1654,
+          "reasoning_output_tokens": 21
+        }
+      },
+      "grade": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 14,
+        "total": 14,
+        "critical_failures": 0
+      },
+      "original_grade": {
+        "passed": false,
+        "cases": [
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "accommodation_state"
+            ]
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": false,
+            "critical": true,
+            "failures": [
+              "outstanding_balance"
+            ]
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 12,
+        "total": 14,
+        "critical_failures": 2
+      },
+      "response_sha256": "e8ba3fb7ab45ce6c94a71362a4a8f0bfb393b1d4ff81406d17a68ee93a0c9499"
+    }
+  ],
+  "passed": true,
+  "limits": "Synthetic tools only; native installation is verified separately. Human artifact review remains separate.",
+  "grader_revision_note": "Saved responses regraded without model rerun or modification. Accept the engine state uncovered as unresolved accommodation, and USD-prefixed exact decimal balances. Incorrect coverage, amounts and currencies still fail, with regression tests. Original grades are retained.",
+  "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35",
+  "hash_note": "Original skill_hash retained. canonical_skill_hash uses POSIX path ordering and LF-normalized bytes; every source skill file was compared with the evaluated installed snapshot."
+}

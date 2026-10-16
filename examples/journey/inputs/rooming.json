@@ -1,0 +1,115 @@
+{
+  "starts_on": "2030-10-04",
+  "ends_on": "2030-10-06",
+  "timezone": "America/New_York",
+  "guests": [
+    {
+      "id": "alex",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 17:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00"
+    },
+    {
+      "id": "blair",
+      "household_id": "h1",
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-04 18:00:00-04:00",
+      "departure": "2030-10-06 10:00:00-04:00"
+    },
+    {
+      "id": "casey",
+      "household_id": null,
+      "rsvp_status": "confirmed",
+      "truth_state": "confirmed",
+      "arrival": "2030-10-05 12:00:00-04:00",
+      "departure": "2030-10-06 09:00:00-04:00"
+    },
+    {
+      "id": "devon",
+      "household_id": null,
+      "rsvp_status": "unknown",
+      "truth_state": null,
+      "arrival": null,
+      "departure": null
+    }
+  ],
+  "beds": [
+    {
+      "key": "queen",
+      "label": "Queen",
+      "bed_type": "queen",
+      "capacity": 2,
+      "shareable": true,
+      "id": "fc24c292-628b-5660-bc2d-a36534816f52",
+      "room_id": "30b290fd-566a-59db-91a6-3f5bb100b3fa",
+      "accessible": true,
+      "quiet": true,
+      "private_room": false,
+      "available_from": null,
+      "available_until": null
+    },
+    {
+      "key": "twin-a",
+      "label": "Twin A",
+      "bed_type": "twin",
+      "capacity": 1,
+      "shareable": false,
+      "id": "c19fa2c2-51ad-5312-bd5b-cd4ba9bc9e76",
+      "room_id": "511c31d9-af98-5b92-b18c-88dfa1d2ef09",
+      "accessible": false,
+      "quiet": false,
+      "private_room": false,
+      "available_from": null,
+      "available_until": null
+    },
+    {
+      "key": "twin-b",
+      "label": "Twin B",
+      "bed_type": "twin",
+      "capacity": 1,
+      "shareable": false,
+      "id": "e747361a-ead5-50e6-9b6a-0c525a2cba8d",
+      "room_id": "511c31d9-af98-5b92-b18c-88dfa1d2ef09",
+      "accessible": false,
+      "quiet": false,
+      "private_room": false,
+      "available_from": null,
+      "available_until": null
+    },
+    {
+      "key": "double",
+      "label": "Double",
+      "bed_type": "double",
+      "capacity": 2,
+      "shareable": true,
+      "id": "9ebd1002-3010-5e2f-8363-b42161142b14",
+      "room_id": "0a0f74fc-5483-5762-ae05-c86627e10021",
+      "accessible": false,
+      "quiet": true,
+      "private_room": false,
+      "available_from": null,
+      "available_until": null
+    }
+  ],
+  "constraints": [
+    {
+      "id": "b62fe5f2-5219-5dd0-bbbd-b1db0e26f721",
+      "guest_id": "alex",
+      "kind": "requires_own_bed",
+      "hard": true,
+      "weight": 0,
+      "details": {}
+    },
+    {
+      "id": "e0d1fc4a-d08c-51ca-a05e-d1516aa4f522",
+      "guest_id": "casey",
+      "kind": "requires_accessibility",
+      "hard": true,
+      "weight": 0,
+      "details": {}
+    }
+  ]
+}

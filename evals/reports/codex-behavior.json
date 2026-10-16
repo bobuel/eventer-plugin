@@ -1,0 +1,180 @@
+{
+  "harness": "codex",
+  "suite": "behavior",
+  "skill_hash": "a1c2de79cabbf2cf93f39f3ea746bcb9e4a5114d79ee0c0345896621c98afcae",
+  "executed_at": "2026-10-16T02:09:36.551929+00:00",
+  "results": [
+    {
+      "repeat": 1,
+      "metadata": {
+        "harness_version": "codex-cli 0.162.0-alpha.17.2",
+        "exit_code": 0,
+        "elapsed_seconds": 77.95371,
+        "model": "harness default; not exposed by this CLI transcript",
+        "usage": {
+          "input_tokens": 157049,
+          "cached_input_tokens": 129024,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2099,
+          "reasoning_output_tokens": 23
+        }
+      },
+      "grade": {
+        "passed": true,
+        "cases": [
+          {
+            "id": "route-meals",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "resume",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "setup",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "setup-missing",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "guest-correction",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "guest-other-event",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-no-approval",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "message-uncertain",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "lodging",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "lodging-infeasible",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "meals",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "meal-privacy",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "vendor",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "vendor-injection",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "research",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "research-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "transport",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "schedule-conflict",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "readiness",
+            "passed": true,
+            "critical": false,
+            "failures": []
+          },
+          {
+            "id": "live-change",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "wrap-up-export",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          },
+          {
+            "id": "scheduler-missing",
+            "passed": true,
+            "critical": true,
+            "failures": []
+          }
+        ],
+        "passed_count": 24,
+        "total": 24,
+        "critical_failures": 0
+      }
+    }
+  ],
+  "passed": true,
+  "limits": "Synthetic tools only; native installation is verified separately. Human artifact review remains separate.",
+  "canonical_skill_hash": "35890e0307b83253e02dc28dc4735c4674aee72edd4c17d21c5d03071c22ad35",
+  "hash_note": "Original skill_hash retained. canonical_skill_hash uses POSIX path ordering and LF-normalized bytes; every source skill file was compared with the evaluated installed snapshot."
+}

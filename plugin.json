@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "eventer",
+  "version": "0.1.0",
+  "description": "Coordinate group events with evidence-backed skills, local planning helpers, and your existing tools."
+}

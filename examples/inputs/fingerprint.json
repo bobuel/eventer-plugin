@@ -1,0 +1,8 @@
+{
+  "event_id": "synthetic-weekend",
+  "revision": 1,
+  "recipients": [
+    "guest@example.test"
+  ],
+  "content": "Dinner is at 6pm."
+}

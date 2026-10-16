@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "event_id": "replace-with-event-id",
+  "revision": 0,
+  "name": "",
+  "timezone": "America/New_York",
+  "starts_on": null,
+  "ends_on": null,
+  "host": {
+    "name": "",
+    "authority": "host"
+  },
+  "capabilities": {},
+  "guests": [],
+  "requirements": [],
+  "unresolved": []
+}

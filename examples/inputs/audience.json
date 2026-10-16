@@ -1,0 +1,22 @@
+{
+  "item": {
+    "starts_at": "2030-10-05T18:00:00-04:00",
+    "ends_at": "2030-10-05T19:00:00-04:00",
+    "audience_rule": "confirmed_present"
+  },
+  "guests": [
+    {
+      "id": "alex",
+      "rsvp_status": "confirmed"
+    }
+  ],
+  "segments": [
+    {
+      "guest_id": "alex",
+      "truth_state": "confirmed",
+      "active": true,
+      "arrival_at": "2030-10-04T16:00:00-04:00",
+      "departure_at": "2030-10-07T10:00:00-04:00"
+    }
+  ]
+}

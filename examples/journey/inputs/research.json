@@ -1,0 +1,13 @@
+{
+  "candidate": {
+    "source_url": "https://example.test/accessible",
+    "retrieved_at": "2030-10-04T12:00:00Z",
+    "accessible": true,
+    "max_group_size": 8
+  },
+  "constraints": {
+    "accessible_required": true,
+    "group_size": 6
+  },
+  "now": "2030-10-04T13:00:00Z"
+}

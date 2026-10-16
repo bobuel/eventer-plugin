@@ -1,0 +1,28 @@
+{
+  "before": {
+    "currency": "USD",
+    "items": [
+      {
+        "description": "Synthetic dinners",
+        "quantity": "6",
+        "unit_price": "212.95",
+        "source_span": "Host-entered synthetic quote"
+      }
+    ],
+    "tax": "0.00",
+    "fees": "0.00"
+  },
+  "after": {
+    "currency": "USD",
+    "items": [
+      {
+        "description": "Synthetic dinners",
+        "quantity": "6",
+        "unit_price": "21.95",
+        "source_span": "Host-entered synthetic quote"
+      }
+    ],
+    "tax": "0.00",
+    "fees": "0.00"
+  }
+}

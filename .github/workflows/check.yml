@@ -1,0 +1,28 @@
+name: Offline checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python scripts/validate.py
+      - run: python -m pytest
+      - run: python evals/run.py offline
+      - run: python scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eventer-${{ matrix.os }}
+          path: dist/

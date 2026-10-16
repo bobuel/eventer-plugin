@@ -1,0 +1,190 @@
+{
+  "fixture_version": 1,
+  "synthetic": true,
+  "inputs": {
+    "meal": {
+      "id": "11000000-0000-0000-0000-000000000001",
+      "name": "Friday dinner",
+      "template_key": "dinner",
+      "service_start": "2026-10-02T18:00:00-04:00",
+      "service_end": "2026-10-02T20:00:00-04:00",
+      "timezone": "America/New_York",
+      "location": "Main dining room",
+      "owner_id": "11000000-0000-0000-0000-000000000009",
+      "status": "planning",
+      "final_count_deadline": "2026-10-01T12:00:00-04:00",
+      "attendance_rule": "interval_overlap",
+      "serving_categories": [
+        "adult",
+        "child"
+      ],
+      "version": 1
+    },
+    "guests": [
+      {
+        "id": "11000000-0000-0000-0000-000000000002",
+        "name": "Synthetic Alex",
+        "rsvp_status": "confirmed",
+        "arrival": "2026-10-02T12:00:00-04:00",
+        "departure": "2026-10-04T10:00:00-04:00",
+        "precision": "exact_time",
+        "truth_state": "confirmed"
+      },
+      {
+        "id": "11000000-0000-0000-0000-000000000003",
+        "name": "Synthetic Sam",
+        "rsvp_status": "unknown",
+        "arrival": null,
+        "departure": null
+      }
+    ],
+    "overrides": [],
+    "profiles": [
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000002",
+        "serving_category": "adult",
+        "dietary_status": "has_needs"
+      }
+    ],
+    "needs": [
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000002",
+        "category": "peanut_free",
+        "need_type": "allergy",
+        "requirement_id": "11000000-0000-0000-0000-000000000004",
+        "evidence_id": "11000000-0000-0000-0000-000000000005",
+        "restricted_note": "Synthetic private source context"
+      }
+    ],
+    "accommodations": [],
+    "requirements": [
+      {
+        "id": "11000000-0000-0000-0000-000000000004",
+        "guest_id": "11000000-0000-0000-0000-000000000002",
+        "kind": "allergy",
+        "description": "Synthetic private source context",
+        "evidence_id": "11000000-0000-0000-0000-000000000005"
+      }
+    ]
+  },
+  "meal_list": {
+    "event_version": 4,
+    "meals": [
+      {
+        "id": "11000000-0000-0000-0000-000000000001",
+        "name": "Friday dinner",
+        "template_key": "dinner",
+        "service_start": "2026-10-02T18:00:00-04:00",
+        "service_end": "2026-10-02T20:00:00-04:00",
+        "timezone": "America/New_York",
+        "location": "Main dining room",
+        "owner_id": "11000000-0000-0000-0000-000000000009",
+        "status": "planning",
+        "final_count_deadline": "2026-10-01T12:00:00-04:00",
+        "attendance_rule": "interval_overlap",
+        "serving_categories": [
+          "adult",
+          "child"
+        ],
+        "version": 1
+      }
+    ]
+  },
+  "safe_response": {
+    "generator_version": "meals-v1",
+    "counts": {
+      "confirmed": 1,
+      "possible": 0,
+      "unknown": 1,
+      "absent": 0
+    },
+    "serving_counts": {
+      "adult": {
+        "confirmed": 1,
+        "possible": 0,
+        "unknown": 0,
+        "absent": 0
+      },
+      "child": {
+        "confirmed": 0,
+        "possible": 0,
+        "unknown": 0,
+        "absent": 0
+      },
+      "unknown": {
+        "confirmed": 0,
+        "possible": 0,
+        "unknown": 1,
+        "absent": 0
+      }
+    },
+    "coverage": [
+      {
+        "category": "peanut_free",
+        "need_type": "allergy",
+        "state": "uncovered",
+        "count": 1
+      },
+      {
+        "category": "unknown",
+        "need_type": "unknown",
+        "state": "unknown",
+        "count": 1
+      }
+    ],
+    "unknown_dietary_count": 1,
+    "unmapped_requirement_count": 0,
+    "disclaimer": "Coverage records documented accommodations; Eventer does not certify allergen safety.",
+    "meal_id": "11000000-0000-0000-0000-000000000001",
+    "meal_version": 1,
+    "input_versions": {
+      "meal:11000000-0000-0000-0000-000000000001": 1
+    },
+    "final_count": null,
+    "changes_since_final": null
+  },
+  "attendance_response": {
+    "attendance": [
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000002",
+        "name": "Synthetic Alex",
+        "serving_category": "adult",
+        "state": "confirmed",
+        "reason": "interval_overlap",
+        "evidence_id": null
+      },
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000003",
+        "name": "Synthetic Sam",
+        "serving_category": "unknown",
+        "state": "unknown",
+        "reason": "missing_interval",
+        "evidence_id": null
+      }
+    ]
+  },
+  "privileged_response": {
+    "details": [
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000002",
+        "category": "peanut_free",
+        "need_type": "allergy",
+        "state": "uncovered",
+        "reason": "no_accommodation",
+        "requirement_id": "11000000-0000-0000-0000-000000000004",
+        "evidence_id": "11000000-0000-0000-0000-000000000005",
+        "restricted_note": "Synthetic private source context",
+        "accommodation_evidence_id": null
+      },
+      {
+        "guest_id": "11000000-0000-0000-0000-000000000003",
+        "category": "unknown",
+        "need_type": "unknown",
+        "state": "unknown",
+        "reason": "dietary_answer_missing",
+        "restricted_note": null,
+        "evidence_id": null
+      }
+    ]
+  }
+}
