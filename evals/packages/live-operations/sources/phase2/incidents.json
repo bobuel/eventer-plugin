@@ -15,7 +15,8 @@
     "source_id": "checkin-release",
     "event_id": "live-operations",
     "actor": "Property manager verified by host",
-    "body": "Check-in code is TEST-4821. Share only with confirmed lodging guests, after host approves the exact draft."
+    "secure_channel": "https://example.test/property/secure-check-in",
+    "body": "Confirmed lodging guests should use the property secure check-in channel https://example.test/property/secure-check-in to obtain their access instructions directly. Keep access codes outside Eventer. Draft this direction only for confirmed lodging guests; host approval is required before sending."
   },
   {
     "source_id": "new-vendor-terms",

@@ -33,6 +33,14 @@ def test_inline_and_overlay_must_agree(tmp_path):
     assert 'Portable and Codex listing metadata diverge' in validate.validate_listing(tmp_path,portable,codex)
 
 
+@pytest.mark.parametrize('format',['portable','codex'])
+def test_local_helper_execution_is_declared(tmp_path,format):
+    portable,codex=candidate(tmp_path)
+    target=portable['extensions']['com.openai'] if format=='portable' else codex
+    target.pop('requires_local_executor')
+    assert validate.validate_listing(tmp_path,portable,codex)
+
+
 @pytest.mark.parametrize('mutation',['long_subtitle','secret_url','traversal','nonsquare','active_svg'])
 def test_bad_listing_asset_or_text_is_rejected(tmp_path,mutation):
     portable,codex=candidate(tmp_path)

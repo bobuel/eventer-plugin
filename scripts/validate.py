@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def validate_listing(root, portable, codex):
     """Local checks of our skills-only listing; not OpenAI portal acceptance."""
     failures=[]
+    if portable.get('extensions',{}).get('com.openai',{}).get('requires_local_executor') is not True or codex.get('requires_local_executor') is not True:
+        failures.append('Eventer local helpers require the desktop execution declaration')
     interface=portable.get('extensions',{}).get('com.openai',{}).get('interface',{})
     if interface!=codex.get('interface'):
         failures.append('Portable and Codex listing metadata diverge')

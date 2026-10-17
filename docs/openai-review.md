@@ -22,9 +22,10 @@ validation is a preflight; it cannot certify OpenAI's scans or policy approval.
 Use [the verification record](verification.md) and the versioned reports in
 `evals/reports/`. They separate offline tests, native installation, simulated
 hosting behavior and artifact review. The fresh qualification preserves failed
-attempts instead of reporting only the successful retests. Different skill
-iterations have different recorded hashes; this is development evidence, not a
-held-out reliability benchmark or a claim that every harness behaves identically.
+attempts instead of reporting only the successful retests. Historical iterations
+have different recorded hashes; the final qualification checks one frozen set of
+skill files across all seven phases. This is development evidence, not a held-out
+reliability benchmark or a claim that every harness behaves identically.
 
 The suites cover invitations and corrections, household authority, opt-outs,
 private requirements, nightly rooming, meal intervals, vendor quote changes,
@@ -35,15 +36,14 @@ bookings, payments, production schedulers and independent human hosting acceptan
 are outside the evidence. Claude installation is tested; Claude model behavior
 is not claimed. Other documented harnesses use the portable installer.
 
-## Policy question before directory submission
+## Privacy boundary
 
-The existing check-in workflow supports a host-approved, restricted draft
-containing a property door code. The synthetic live-event evaluation tests that
-behavior; public guest digests must exclude the code. OpenAI's current guidelines
-restrict collecting or processing access credentials and authentication secrets.
-We interpret property access codes as a potential conflict that requires removal
-from the workflow or clarification from OpenAI. This is our interpretation, not
-an OpenAI decision on Eventer. Do not describe directory compliance as established.
+The owner approved removing property access codes from Eventer's workflow.
+Eventer now directs guests to the property's secure check-in channel, and keeps
+codes out of drafts, evidence excerpts, records and exports. Synthetic adversarial
+tests check that supplied code-like canaries do not enter generated artifacts.
+This responds to the guideline restriction on access credentials and authentication
+secrets; it is not an OpenAI decision or a certification of directory compliance.
 [Plugin guidelines](https://developers.openai.com/plugins/plugin-guidelines).
 
 Accommodation requirements also need data minimization and appropriate consent.
@@ -56,18 +56,18 @@ pass does not establish consent or legal compliance for a real event.
 > https://github.com/bobuel/eventer-plugin. It uses the user's existing AI harness
 > and tools, without an Eventer service. The repository includes reproducible
 > synthetic hosting evaluations, preserved failure/retest reports, native Codex
-> and Claude installation checks, and privacy/listing assets. Before submitting,
-> I'd like to clarify whether a host-approved private draft containing a property
-> door code falls under the restricted access-credentials rule. We can route
-> access instructions through the property's secure channel instead. Please see
-> docs/verification.md for the exact tested scope and limitations.
+> and Claude installation checks, and privacy/listing assets. Property access
+> codes stay outside Eventer; guests use the property's secure check-in channel.
+> I'd welcome feedback on directory suitability and the package's review
+> readiness. Please see docs/verification.md for the exact tested scope,
+> preserved development failures and limitations.
 
 This is an unsent draft. It deliberately does not claim approval or universal
 behavioral reliability.
 
 ## Submission route
 
-After resolving the policy question, open [Plugins](https://platform.openai.com/plugins),
+Open [Plugins](https://platform.openai.com/plugins),
 select the appropriate organization/project and verified developer identity,
 upload the versioned ZIP, resolve metadata/skill findings and submit for review.
 The maintainer's verified identity and account permissions have not been inspected.
@@ -75,6 +75,13 @@ The manifest's public GitHub handle does not establish publisher verification.
 Approval precedes directory publication. Skills-only packages do not require the
 MCP-specific test-case/demo materials. Follow the current
 [official submission instructions](https://developers.openai.com/plugins/deploy/submission).
+
+Eventer's local Python helpers require desktop execution in the OpenAI directory.
+Both supported manifests declare `requires_local_executor: true`. There is no
+local MCP server. If the portal rejects that field, contact your OpenAI
+representative with the submitting organization ID to confirm access, as described
+in the [desktop-only instructions](https://developers.openai.com/plugins/deploy/desktop-only).
+This OpenAI declaration does not change portable installation in other harnesses.
 
 For local reproduction:
 

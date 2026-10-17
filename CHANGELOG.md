@@ -1,6 +1,17 @@
 # Changelog
 
-## 0.1.2
+## 0.1.3
+
+Keep property access codes outside Eventer. Communications, setup, shared privacy
+rules and export instructions use the property's secure channel instead. Added
+recursive artifact and simulated-send leak checks, an adversarial source and
+negative grader tests. Both OpenAI manifests declare local desktop execution.
+
+The offline suite passes 252 tests. Release verification distinguishes native
+installation, synthetic hosting behavior, reviewed artifacts and OpenAI approval.
+Version 0.1.3 gives existing 0.1.2 installations a distinct update version.
+
+## 0.1.2 candidate (not tagged)
 
 Added directory listing metadata, a self-contained calendar icon, a published
 privacy-policy source, and local listing validation. OpenAI directory approval

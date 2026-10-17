@@ -25,6 +25,12 @@ host or venue instead. Do not supply medical records, diagnoses, government IDs,
 card or bank account details, passwords, API keys or authentication tokens. Eventer
 does not provide medical advice or certify allergen safety.
 
+Property door/access codes stay outside Eventer. Use the property's secure check-in
+channel to obtain and share them. Eventer records only non-secret availability,
+contact and channel information; it does not include codes in drafts, evidence
+excerpts or exports. If a supplied original file contains a secret, leave that
+original untouched and exclude it from Eventer copies and exports.
+
 ## Who can receive information
 
 Your harness and model provider may receive the prompts, files and tool results

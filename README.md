@@ -73,7 +73,8 @@ providers, send messages, book transport, or make payments. See the
 
 See [verification status](docs/verification.md) for executed checks and gaps.
 The [OpenAI review brief](docs/openai-review.md) separates public installation
-from directory submission and records the remaining policy question.
+from directory submission. Property access codes stay outside Eventer; use the
+property's secure check-in channel.
 The [evaluation suite](evals/README.md) distinguishes deterministic tests from
 actual model behavior and human review. A schema check is not a successful event.
 

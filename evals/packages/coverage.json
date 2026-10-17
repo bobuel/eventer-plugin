@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "scope": "Hosting capabilities of the portable plugin; no service/database/real-provider guarantee.",
   "requirements": [
     {
@@ -165,10 +165,16 @@
       "check": "incident_records_and_updated_schedule"
     },
     {
-      "id": "private-checkin",
+      "id": "secure-checkin-channel",
       "package": "live-operations",
       "phase": 2,
-      "check": "no_code_in_general_digest_or_send"
+      "check": "source_linked_unsent_draft_for_exact_lodging_audience"
+    },
+    {
+      "id": "access-codes-excluded",
+      "package": "live-operations",
+      "phase": 2,
+      "check": "no_canary_in_generated_artifacts_or_simulated_sends"
     },
     {
       "id": "fresh-session-recovery",

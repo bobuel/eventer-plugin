@@ -15,6 +15,10 @@ revisions and decisions **before exporting**. Include the event's original sourc
 files, not just an index pointing outside the archive. Review selected contents
 for secrets and private material; filename checks cannot guarantee secret-free
 contents. Keep unrelated events and harness configuration outside selected roots.
+Do not export access codes or credentials, even if an original attachment contains
+them. Select only non-secret event evidence and source material; retain a non-secret
+reference to the property's secure channel. Leave originals untouched outside the
+export. Stop an export until confidential inputs are excluded from its selected roots.
 
 Use the `archive` operation in [the shared helper contracts](../eventer/references/helpers.md)
 with explicit paths. Save an input such as:

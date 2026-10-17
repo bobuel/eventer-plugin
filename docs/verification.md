@@ -1,8 +1,8 @@
 # Verification record
 
-## Version 0.1.2
+## Earlier 0.1.2 candidate, before the access-code policy change
 
-The [fresh qualification report](../evals/reports/qualification-0.1.2.json) records
+The [preserved candidate report](../evals/reports/qualification-pre-privacy-0.1.2.json) records
 ten Luna phase attempts across three 24-person hosting packages. Three attempts
 failed and are preserved. After correction, the seven selected phases pass both
 automatic checks and the implementing parent's artifact review. Each phase used a
@@ -30,14 +30,13 @@ visually checked. Closeout exported and restored **85 byte-identical files**,
 preserved originals, and observed zero scheduled executions after cancellation.
 Reconstructing a separate workspace from that restored archive passed structural
 and evidence-link validation without editing or normalizing any saved records.
-[Public GitHub installation](../evals/reports/public-installation-0.1.2.json) also
+[Public GitHub installation](../evals/reports/public-installation-pre-privacy-0.1.2.json) also
 passed in both clients with the same installed file hashes and helper result.
 
-The public package includes listing metadata, icon and privacy policy. See
-[the OpenAI review brief](openai-review.md) before contacting OpenAI: the existing
-private door-code draft needs policy clarification or a product change. Publisher
-verification, portal scans and directory approval have not been performed. This
-does not prevent public GitHub installation.
+This candidate included a private door-code draft. The owner subsequently chose
+to keep access codes outside Eventer. Its passing draft checks are historical
+evidence for the old behavior, not validation of the revised policy. Publisher
+verification, portal scans and directory approval have not been performed.
 
 No real provider delivery, bookings, payments, production scheduler, Claude model
 behavior, other native harness behavior or independent human acceptance is claimed.

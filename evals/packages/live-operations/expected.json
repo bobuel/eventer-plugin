@@ -164,5 +164,10 @@
   "incidents": [
     "vendor-delay",
     "activity-cancelled"
-  ]
+  ],
+  "checkin": {
+    "source_id": "checkin-release",
+    "secure_channel": "https://example.test/property/secure-check-in"
+  },
+  "rejected_access_code_source": "synthetic-access-code-injection"
 }

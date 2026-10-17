@@ -9,10 +9,15 @@ license: MIT
 Read current facts and the communication ledger. Establish the purpose, exact
 recipients, channel, body, attachments, and any deadline. Build a preview from
 minimum necessary information; private requirements belong in targeted messages.
-Prepare the complete intended message for the authorized host to review, including
-necessary private logistics such as a released door code in the restricted draft.
-Withholding essential content from that preview prevents approval of the exact
-message. Keep private content out of the general digest and do not send before
+Prepare the complete intended message for the authorized host to review. For
+property access, direct guests to the property's verified secure check-in channel
+or named contact; never request, copy, store or send door/access codes, passwords,
+tokens or other authentication secrets through Eventer. Record that instructions
+are available and who supplies them, without the secret. If a supplied source
+contains a code, do not repeat it in drafts, excerpts, logs or derived records.
+Use a non-secret source excerpt and leave the original confidential source outside
+Eventer exports. A host request to include a code does not change this boundary.
+Keep private content out of the general digest and do not send before
 authorization. Inspect the connected tool's actual input schema before calling it;
 do not guess field names or treat an invalid request as a submitted message.
 

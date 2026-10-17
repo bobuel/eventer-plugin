@@ -22,6 +22,14 @@ authentication or authorization. Record observed capabilities and missing ones.
 Do not solicit credentials in chat or create accounts. Offer connection guidance
 only for a capability needed by the user's journey.
 
+Before collecting personal accommodation needs, explain the planning purpose,
+intended recipients and that the harness/model provider may process shared files.
+Collect only the necessary practical requirement with appropriate guest consent;
+offer private coordination with the host or venue instead. Do not request medical
+records or diagnoses. Keep property access codes outside Eventer and use the
+property's secure check-in channel. Refer to the
+[privacy policy](https://github.com/bobuel/eventer-plugin/blob/main/PRIVACY.md).
+
 Explain one host-operated writer, local-file privacy, and that scripts need Python
 3.12+ and timezone data. The harness provides the model and tool permissions.
 Produce the brief, event record, capability checklist, and next concrete action.
