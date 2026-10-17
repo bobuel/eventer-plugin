@@ -30,6 +30,8 @@ visually checked. Closeout exported and restored **85 byte-identical files**,
 preserved originals, and observed zero scheduled executions after cancellation.
 Reconstructing a separate workspace from that restored archive passed structural
 and evidence-link validation without editing or normalizing any saved records.
+[Public GitHub installation](../evals/reports/public-installation-0.1.2.json) also
+passed in both clients with the same installed file hashes and helper result.
 
 The public package includes listing metadata, icon and privacy policy. See
 [the OpenAI review brief](openai-review.md) before contacting OpenAI: the existing
