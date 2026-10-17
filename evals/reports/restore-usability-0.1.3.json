@@ -1,0 +1,24 @@
+{
+  "validate": {
+    "ok": true,
+    "result": {
+      "valid": true,
+      "event_id": "weekend",
+      "revision": 3,
+      "limitations": "Structure only; evidence truth, authority and filesystem privacy are not verified."
+    }
+  },
+  "audit-records": {
+    "ok": true,
+    "result": {
+      "valid": true,
+      "issues": [],
+      "event_id": "weekend",
+      "revision": 3,
+      "limitations": "Checks saved links, source identity, excerpts and labels; not semantic truth, authority or provider delivery."
+    }
+  },
+  "normalization_required": false,
+  "procedure": "Copy restored event into a new workspace and its bundled sources to workspace/sources; no record edits.",
+  "frozen_records_unchanged": true
+}

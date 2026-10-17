@@ -10,6 +10,9 @@ negative grader tests. Both OpenAI manifests declare local desktop execution.
 The offline suite passes 252 tests. Release verification distinguishes native
 installation, synthetic hosting behavior, reviewed artifacts and OpenAI approval.
 Version 0.1.3 gives existing 0.1.2 installations a distinct update version.
+All seven hosting phases pass with the same skill files after documented
+follow-ups. Public Codex/Claude installation matches all 40 files; closeout
+restores 203 identical files. See docs/verification.md for assistance and limits.
 
 ## 0.1.2 candidate (not tagged)
 

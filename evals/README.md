@@ -124,6 +124,12 @@ The earlier public reports describe historical fixture/grader versions, includin
 the former check-in-code task. Preserve them unchanged; do not regrade those runs
 against the new secure-channel fixtures. New behavior needs a fresh run.
 
+The [0.1.3 qualification](reports/qualification-0.1.3.json) runs all seven phases
+against the same final skill files, with five phases receiving documented
+follow-ups. It preserves original failures, parent review corrections and exact
+hashes. Read [the verification record](../docs/verification.md) for the assistance,
+native installation, restore check and remaining limits.
+
 ## Release gates
 
 All deterministic tests pass; clear RSVP accuracy >=95%; no automatic confirmation

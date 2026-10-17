@@ -1,5 +1,55 @@
 # Verification record
 
+## Version 0.1.3
+
+The [final Luna qualification](../evals/reports/qualification-0.1.3.json) passes
+all seven phases across three 24-person hosting packages, with automatic checks
+and separate review of the actual host/guest artifacts. All phases used the same
+40 skill files. Each phase began with a fresh subagent requested as `gpt-6-luna`
+at medium reasoning; an independently resolved model ID was not available.
+Metadata was subsequently bumped from 0.1.2 to 0.1.3 without changing those files.
+
+These are assisted development results, not seven unaided first-attempt passes.
+Five phases received follow-ups: correspondence 1, weekend 1 and 2, and live 1
+and 2. Corrections addressed a wrong-person follow-up, missing canonical helper
+files, contradictory rooming/meal prose, missing structured rejection and guest
+replies misused as vendor-accommodation evidence. Live phase 2 needed two rounds.
+The original artifacts, automatic failures and correction notes are retained.
+The parent's initial weekend dietary-profile allegation was incorrect; the
+profiles already preserved both needs. A grader also falsely rejected a real
+guest as an action owner; its correction has regression tests. Review was by the
+implementing parent, not a blinded external reviewer or human host.
+
+The offline suite passes **252 tests** on Windows with Python 3.12. All twelve
+skills pass package validation. CI reruns the offline suite and package build on
+Windows, Linux and macOS. New negative tests cover credential canaries in generated
+records, evidence, history, copied sources and simulated sends. Live phase 2 kept
+the supplied canary outside those outputs on its initial and corrected attempts,
+and drafted the source-linked secure channel for exactly 21 confirmed guests.
+This is a fixture canary screen, not detection of every possible real secret.
+
+[Public GitHub installation](../evals/reports/public-installation-0.1.3.json)
+passed in isolated Codex and Claude Code homes. Both reported 0.1.3 enabled;
+all 40 files in their installed caches matched the tested source and the quote
+helper returned USD 131.70. Local ZIP installation also passed. Cursor, Copilot,
+Gemini CLI and OpenCode have documented portable installation destinations;
+their native clients/models were not exercised.
+
+Closeout exported and restored **203 identical files**, preserved originals,
+retained the selected 30-day period and observed zero simulated scheduler
+executions after cancellation. A separate
+[restore usability check](../evals/reports/restore-usability-0.1.3.json) rebuilt a
+working workspace and passed record/evidence validation without normalizing or
+editing the restored records. A minor helper display limitation remains: an
+unknown accommodation with null evidence can render the evidence ID as the string
+`None`; its accommodation state stays unknown, not covered.
+
+No real provider delivery, bookings, payments, production scheduler, simultaneous
+cohost writes, Claude model behavior or independent human acceptance is claimed.
+The package is ready to present for OpenAI review/feedback; verified publisher
+identity, portal scans, policy acceptance and directory publication are separate.
+See the [review brief and unsent contact draft](openai-review.md).
+
 ## Earlier 0.1.2 candidate, before the access-code policy change
 
 The [preserved candidate report](../evals/reports/qualification-pre-privacy-0.1.2.json) records
