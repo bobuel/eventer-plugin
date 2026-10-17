@@ -442,3 +442,43 @@ def test_complete_checkin_draft_accepts_unspecified_filename_and_rejects_bad_con
                    {'state':'sent'}]:
         put(path,{**draft,**change})
         assert not complete_checkin_draft(tmp_path,{},audience)
+
+
+@pytest.mark.parametrize('content,private',[
+    ('No private dietary, allergy, lodging, contact, or travel details are included.',False),
+    ('Please contact the host privately about allergy accommodations.',False),
+    ('Blair has an allergy.',True),('Allergy details for g02 follow.',True),
+    ('## Allergy accommodations\n\nBlair requires sesame-free meals.',True),
+    ('## Allergy accommodations\n\nContact the host privately.\n\n## Agenda\n\nBlair will lead the walk.',False),
+    ('## Privacy\n\nPlease contact the host privately about allergy accommodations.',False),
+    ('The peanut requirement is covered.',True),('Check-in code TEST-4821.',True)])
+def test_digest_screen_distinguishes_generic_privacy_text_from_disclosure(content,private):
+    from hosting_grade import digest_private
+    assert digest_private(content,['Avery','Blair']) is private
+
+
+@pytest.mark.parametrize('field,bad,good,check_id',[
+    ('profiles',[{'guest_id':'g01','serving_category':'adult'}],[{'guest_id':'g01','serving_category':'unknown'}],'optional_meal_profiles_grounded'),
+    ('overrides',[{'guest_id':'g01','response':'uncertain','evidence_id':'invented'}],[],'optional_meal_overrides_grounded'),
+])
+@pytest.mark.parametrize('saved_is_good',[False,True])
+def test_optional_meal_grounding_uses_saved_input_not_latest_call(tmp_path,field,bad,good,check_id,saved_is_good):
+    from hosting_grade import grade_live
+    event=tmp_path/'event'
+    event.mkdir()
+    put(tmp_path/'sources/phase1/schedule.json',{'items':[]})
+    saved_input={field:good if saved_is_good else bad}
+    later_input={field:bad if saved_is_good else good}
+    put(event/'meals-input.json',saved_input)
+    saved_output={'counts':{'confirmed':1}}
+    put(event/'meals.json',saved_output)
+    helpers=[{'operation':'meals','input':saved_input,'output':{'result':saved_output}},
+             {'operation':'meals','input':later_input,'output':{'result':{'counts':{'confirmed':2}}}}]
+    checks={}
+    # This unit test isolates grounding; actual-helper provenance is tested
+    # through the full hosting fixture and mutation tests above.
+    def observed(operation,filename=None,current=False):
+        return saved_output if operation=='meals' else {}
+    grade_live({'research':{}},event,1,{},observed,
+               lambda name,condition:checks.update({name:bool(condition)}),helpers,{},tmp_path)
+    assert checks[check_id] is saved_is_good

@@ -16,6 +16,10 @@ do not commit event state.
 The complete collection must be installed together; other skills use this helper.
 Read the relevant input contract before calling a helper. Use its exact field
 names. A rejected input is repairable local work, not a completed calculation.
+Keep each actual helper input paired with its returned output using the operation
+name (for example, `schedule-check-input.json` and `schedule-check.json`). An agenda
+or schedule record is separate from the input used to check it. Read back the
+saved pair before reporting a validated result.
 
 | Operation | JSON input | Result |
 |---|---|---|
@@ -59,9 +63,14 @@ unassigned explanations; a partial result is never a complete plan.
 
 ## Meals
 
-Meal: service_start, service_end, timezone, status, serving_categories. Guests add
-name and precision. Overrides: guest_id, response (in/out/uncertain), evidence_id.
+Meal: service_start, service_end, timezone, status, serving_categories. Every guest
+requires id, name, rsvp_status, truth_state, arrival, departure and precision; keep
+unknown intervals null. Copy those fields from the saved guest record even when
+an explicit meal override exists. Overrides: guest_id, response (in/out/uncertain),
+evidence_id, only for an actual meal-specific reply; otherwise use an empty array.
 Profiles: guest_id, serving_category, dietary_status (unknown/no_needs/has_needs).
+Missing serving profiles stay unknown; a dietary preference does not establish
+serving size. Documented needs imply has_needs, not an unknown dietary response.
 Needs: guest_id, requirement_id, category, evidence_id, need_type (preference/restriction/allergy).
 Accommodations: category, need_type, state (covered/provisional/confirm/uncovered/unknown), evidence_id. Requirements: id,
 guest_id, kind, description, evidence_id. Keep individual rows private; share aggregates where appropriate.

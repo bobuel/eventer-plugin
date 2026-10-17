@@ -5,9 +5,9 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-INCLUDE = {'plugin.json', '.codex-plugin', '.claude-plugin', '.agents', 'skills', 'evals', 'tests',
+INCLUDE = {'plugin.json', '.codex-plugin', '.claude-plugin', '.agents', 'skills', 'evals', 'tests', 'assets',
            'docs', 'examples', 'scripts', '.github', 'README.md', 'LICENSE', 'CONTRIBUTING.md',
-           'SECURITY.md', 'CHANGELOG.md', 'AGENTS.md', 'requirements.txt', 'requirements-dev.txt', 'pyproject.toml', '.gitignore', '.gitattributes'}
+           'SECURITY.md', 'PRIVACY.md', 'CHANGELOG.md', 'AGENTS.md', 'requirements.txt', 'requirements-dev.txt', 'pyproject.toml', '.gitignore', '.gitattributes'}
 
 
 def build(root=ROOT):

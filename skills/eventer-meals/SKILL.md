@@ -11,6 +11,19 @@ profiles, dietary needs, and evidence of vendor accommodations. Missing diet
 information is unknown, not “no restrictions”. Do not infer age or serving type
 from a name. Keep preferences, restrictions and allergies distinct.
 
+Copy each guest's saved RSVP status, truth state, arrival, departure and precision
+into the helper input. A general event RSVP is not a separate meal answer. Add an
+override only when the source explicitly answers that particular meal; otherwise
+leave overrides empty and let the helper calculate attendance from the interval.
+Do not manufacture “uncertain” overrides merely because no meal-specific reply
+exists. The resulting attendance is a planning count, not a vendor commitment.
+
+Serving size/category and dietary need are separate fields. Without a supplied
+serving profile, use `serving_category: "unknown"`; do not default to adult,
+standard or a dietary label such as vegetarian. Preserve documented needs and
+their evidence, and set `dietary_status: "has_needs"` for those guests. Other guests
+remain `dietary_status: "unknown"` until they provide an answer.
+
 Run the `meals` helper. Inspect confirmed/possible/unknown counts, unresolved
 serving categories, and covered/provisional/confirm/uncovered/unknown coverage.
 Count each guest once. Do not turn a menu description into a verified accommodation;

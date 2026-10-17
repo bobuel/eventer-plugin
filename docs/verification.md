@@ -1,5 +1,46 @@
 # Verification record
 
+## Version 0.1.2
+
+The [fresh qualification report](../evals/reports/qualification-0.1.2.json) records
+ten Luna phase attempts across three 24-person hosting packages. Three attempts
+failed and are preserved. After correction, the seven selected phases pass both
+automatic checks and the implementing parent's artifact review. Each phase used a
+fresh Luna subagent without expected answers or corrective follow-up prompts.
+These are development runs on known fixtures, not a measured reliability rate.
+
+The failed attempts found omitted canonical meal fields, invented meal overrides
+and serving categories, and a household sender whose confirmed RSVP appeared only
+in prose. Skills/helper validation were corrected and affected scenarios rerun.
+Correspondence, weekend and live packages use successive recorded skill hashes;
+we do not claim that one final revision ran all seven phases. Local self-correction
+remains visible, including a failed closeout cancellation call missing its input
+file, followed by a successful corrected call.
+
+The offline suite passes **223 tests**. The independent code reviewer reproduced
+and fixed three additional gaps: grading the wrong meal invocation, missing
+privacy context across Markdown headings, and accepting remote SVG resources.
+Regressions are included in the repository. These privacy checks are conservative
+fixture screens and still require prose review.
+
+Native installation of the candidate ZIP passed in isolated Codex and Claude Code
+homes. Both reported 0.1.2 enabled; all 40 installed skill files matched the source
+and the installed quote helper returned USD 131.70. The icon was rendered and
+visually checked. Closeout exported and restored **85 byte-identical files**,
+preserved originals, and observed zero scheduled executions after cancellation.
+Reconstructing a separate workspace from that restored archive passed structural
+and evidence-link validation without editing or normalizing any saved records.
+
+The public package includes listing metadata, icon and privacy policy. See
+[the OpenAI review brief](openai-review.md) before contacting OpenAI: the existing
+private door-code draft needs policy clarification or a product change. Publisher
+verification, portal scans and directory approval have not been performed. This
+does not prevent public GitHub installation.
+
+No real provider delivery, bookings, payments, production scheduler, Claude model
+behavior, other native harness behavior or independent human acceptance is claimed.
+The original Eventer service remains outside this plugin work.
+
 ## Version 0.1.1
 
 All seven phases in the three 24-guest hosting packages pass automatic checks and

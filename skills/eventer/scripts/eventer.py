@@ -99,6 +99,18 @@ def run(operation, data):
         return rooming(data)
     if operation == 'meals':
         ids = identities(data['guests'])
+        for guest in data['guests']:
+            required={'id','name','rsvp_status','truth_state','arrival','departure','precision'}
+            if not required<=guest.keys():
+                raise ValueError('Meal guests require saved id, name, rsvp_status, truth_state, arrival, departure and precision; use null for unknown intervals')
+            if guest['rsvp_status'] not in {'unknown','possible','confirmed','declined'} or guest['truth_state'] not in {'unknown','proposed','confirmed'}:
+                raise ValueError('Invalid meal guest attendance state')
+            if guest['precision'] not in {'unknown','date','part_of_day','exact_time'}:
+                raise ValueError('Invalid meal guest time precision')
+            for key in ['arrival','departure']:
+                if guest[key] is not None: timestamp(guest[key])
+            if guest['arrival'] and guest['departure'] and timestamp(guest['departure'])<timestamp(guest['arrival']):
+                raise ValueError('Meal guest departure precedes arrival')
         for collection in ('overrides', 'profiles'):
             identities(data[collection], 'guest_id')
         for collection in ('overrides', 'profiles', 'needs', 'requirements'):

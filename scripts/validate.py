@@ -3,9 +3,65 @@ import json
 from pathlib import Path
 import re
 import sys
+from urllib.parse import urlsplit
+import xml.etree.ElementTree as ET
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def validate_listing(root, portable, codex):
+    """Local checks of our skills-only listing; not OpenAI portal acceptance."""
+    failures=[]
+    interface=portable.get('extensions',{}).get('com.openai',{}).get('interface',{})
+    if interface!=codex.get('interface'):
+        failures.append('Portable and Codex listing metadata diverge')
+    for field,limit in [('displayName',30),('shortDescription',30),('longDescription',4000),
+                        ('developerName',80),('category',120)]:
+        value=interface.get(field)
+        if not isinstance(value,str) or not value.strip() or len(value)>limit or any(ord(c)<32 for c in value):
+            failures.append('Invalid listing field: '+field)
+    for manifest in [portable,codex]:
+        if not manifest.get('author',{}).get('name'):
+            failures.append('Publisher author.name is required')
+    capabilities=interface.get('capabilities')
+    if not isinstance(capabilities,list) or len(capabilities)>20 or any(not isinstance(c,str) or not c.strip() or len(c)>120 for c in capabilities):
+        failures.append('Invalid listing capabilities')
+    prompts=interface.get('defaultPrompt',[])
+    if not isinstance(prompts,list) or len(prompts)>3 or len(set(prompts))!=len(prompts) or any(not isinstance(p,str) or not p.strip() or len(p)>128 for p in prompts):
+        failures.append('Invalid starter prompts')
+    for field in ['websiteURL','supportURL','privacyPolicyURL']:
+        value=interface.get(field,'')
+        try:
+            url=urlsplit(value)
+            if url.scheme!='https' or not url.hostname or url.username or url.password or len(value)>1024: raise ValueError()
+        except (TypeError,ValueError): failures.append('Invalid listing URL: '+field)
+    if not (root/'PRIVACY.md').is_file(): failures.append('Published privacy policy source is missing')
+    for field in ['logo','composerIcon']:
+        value=interface.get(field,'')
+        if not isinstance(value,str) or not value.startswith('./'):
+            failures.append('Invalid asset path: '+field); continue
+        path=(root/value).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file() or path.is_symlink():
+            failures.append('Missing or escaping listing asset: '+field); continue
+        if path.stat().st_size>5*1024*1024:
+            failures.append('Oversized listing asset: '+field); continue
+        # Eventer deliberately ships one self-contained SVG; reject active or
+        # remotely loaded content and verify the official square size boundary.
+        try:
+            raw=path.read_text(encoding='utf-8')
+            if path.suffix!='.svg' or '<!DOCTYPE' in raw or '<!ENTITY' in raw: raise ValueError()
+            svg=ET.fromstring(raw)
+            width,height=float(svg.get('width','0')),float(svg.get('height','0'))
+            if width<48 or width!=height: raise ValueError()
+            for element in svg.iter():
+                if element.tag.split('}')[-1] in {'script','foreignObject','image','use','style'}: raise ValueError()
+                if any(k.split('}')[-1].startswith('on') or k.split('}')[-1] in {'href','style'} for k in element.attrib): raise ValueError()
+                for value in element.attrib.values():
+                    if re.search(r'url\s*\(',value,re.IGNORECASE) and not re.fullmatch(r'''url\s*\(\s*(['"]?)\#[A-Za-z_][\w:.-]*\1\s*\)''',value,re.IGNORECASE):
+                        raise ValueError()
+        except (ValueError,ET.ParseError,UnicodeError): failures.append('Invalid self-contained SVG icon: '+field)
+    return failures
 
 
 def validate(root=ROOT):
@@ -14,6 +70,7 @@ def validate(root=ROOT):
     data = [json.loads(p.read_text(encoding='utf-8')) for p in manifests]
     if len({(d['name'], d['version']) for d in data}) != 1:
         failures.append('Plugin identities or versions diverge')
+    failures.extend(validate_listing(root,data[0],data[1]))
     skills = list((root / 'skills').glob('*/SKILL.md'))
     if len(skills) != 12:
         failures.append('Expected all twelve skills')

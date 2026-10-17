@@ -1,6 +1,40 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "eventer",
-  "version": "0.1.1",
-  "description": "Coordinate group events with evidence-backed skills, local planning helpers, and your existing tools."
+  "version": "0.1.2",
+  "description": "Coordinate group events with evidence-backed skills, local planning helpers, and your existing tools.",
+  "author": {
+    "name": "bobuel",
+    "url": "https://github.com/bobuel"
+  },
+  "repository": "https://github.com/bobuel/eventer-plugin",
+  "license": "MIT",
+  "homepage": "https://github.com/bobuel/eventer-plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Eventer",
+        "shortDescription": "Plan and host group events",
+        "longDescription": "Help a host plan a multi-day group event, reconcile guest replies, propose room assignments and meals, compare vendor quotes, coordinate an agenda and rides, and close out the event. Eventer works through your existing AI harness and tools and keeps durable records in a folder you choose. It has no hosted service or background process. External messages require user authority; missing integrations produce drafts. Local helpers calculate proposals and check records, but do not establish availability, booking, payment, delivery or allergen safety.",
+        "developerName": "bobuel",
+        "category": "Productivity",
+        "capabilities": [
+          "Event planning",
+          "Guest reconciliation",
+          "Local planning files"
+        ],
+        "websiteURL": "https://github.com/bobuel/eventer-plugin",
+        "supportURL": "https://github.com/bobuel/eventer-plugin/issues",
+        "privacyPolicyURL": "https://github.com/bobuel/eventer-plugin/blob/main/PRIVACY.md",
+        "defaultPrompt": [
+          "Help me plan a three-day group weekend. Start with the event brief.",
+          "Reconcile these guest replies and show which plans need review.",
+          "Review my event readiness and give me the next useful action."
+        ],
+        "brandColor": "#145C54",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
 }

@@ -9,7 +9,8 @@ plan for the day. It follows changes through to wrap-up.
 
 No Eventer account, server, database, subscription, or background process. Your
 harness supplies the model and connected tools. Your event records stay in a folder
-you choose. Existing model and connected-service charges still apply.
+you choose. Existing model and connected-service charges still apply. Your harness
+and model provider may process files you share; see the [privacy policy](PRIVACY.md).
 
 ## Start here
 
@@ -71,6 +72,8 @@ providers, send messages, book transport, or make payments. See the
 ## Evidence and limits
 
 See [verification status](docs/verification.md) for executed checks and gaps.
+The [OpenAI review brief](docs/openai-review.md) separates public installation
+from directory submission and records the remaining policy question.
 The [evaluation suite](evals/README.md) distinguishes deterministic tests from
 actual model behavior and human review. A schema check is not a successful event.
 

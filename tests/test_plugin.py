@@ -42,6 +42,15 @@ def test_event_evidence_and_identity_validation():
         eventer.run('validate', data)
 
 
+@pytest.mark.parametrize('field',['rsvp_status','truth_state','arrival','departure','precision'])
+def test_meal_override_cannot_hide_missing_canonical_attendance(field):
+    data=example('meals')
+    data['overrides']=[{'guest_id':'g1','response':'uncertain','evidence_id':'meal-reply'}]
+    data['guests'][0].pop(field)
+    with pytest.raises(ValueError,match='Meal guests require'):
+        eventer.run('meals',data)
+
+
 def test_fingerprint_changes_with_action_and_does_not_authorize():
     data = example('fingerprint')
     first = eventer.run('fingerprint', data)

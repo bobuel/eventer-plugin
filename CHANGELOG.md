@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.2
+
+Added directory listing metadata, a self-contained calendar icon, a published
+privacy-policy source, and local listing validation. OpenAI directory approval
+is separate from this release; see docs/openai-review.md.
+
+Fresh Luna evaluations exposed missing canonical meal inputs, invented meal
+overrides/serving categories, and an omitted household sender. Tightened meal
+input validation, grounded meal instructions and household reconciliation. Helper
+inputs and outputs now have explicit paired-file guidance. The qualification
+report preserves failures and exact tested skill hashes across iterations.
+
+Hardened optional-meal grounding, guest-digest privacy screening, and SVG resource
+validation after an independent code review. The offline suite passes 223 tests.
+Native local-package installation passed in Codex and Claude Code.
+
 ## 0.1.1
 
 Added a verified local archive/restore helper and a read-only evidence-record

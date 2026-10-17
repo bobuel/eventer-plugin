@@ -10,6 +10,12 @@ Read the event dates/timezone, current guests and source identities. Match the
 sender to a guest; a household reply may cover another person only with explicit
 authority. Unmatched identities and plus-ones remain proposals for host review.
 
+Reconcile every person named in a household reply, including the sender. “We both
+confirm” supports the sender's own attendance as well as the authorized household
+member; do not update only the second person. Before finishing, compare each
+matched reply with the saved guest rows, then derive summary counts from those
+rows. A prose claim cannot repair a missing or contradictory saved RSVP.
+
 Extract claims with guest_id, field, value, source_id, and an exact evidence_span.
 Separate attendance, preferences, requirements, and uncertainty. For RSVP exports
 use the structured claim fields in the shared record reference. Resolve weekdays
