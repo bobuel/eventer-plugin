@@ -2,17 +2,14 @@
 
 ## 0.1.3
 
-Keep property access codes outside Eventer. Communications, setup, shared privacy
-rules and export instructions use the property's secure channel instead. Added
-recursive artifact and simulated-send leak checks, an adversarial source and
-negative grader tests. Both OpenAI manifests declare local desktop execution.
+- Check-in messages now direct guests to the property's secure channel. Access
+  codes stay out of event notes, drafts, and exports.
+- Added setup guidance for handling private guest requirements.
+- Added tests for check-in privacy and expanded the event-planning evaluations.
+- Updated package metadata for desktop execution in Codex.
 
-The offline suite passes 252 tests. Release verification distinguishes native
-installation, synthetic hosting behavior, reviewed artifacts and OpenAI approval.
-Version 0.1.3 gives existing 0.1.2 installations a distinct update version.
-All seven hosting phases pass with the same skill files after documented
-follow-ups. Public Codex/Claude installation matches all 40 files; closeout
-restores 203 identical files. See docs/verification.md for assistance and limits.
+See the [verification record](docs/verification.md) for test results and supported
+installation methods.
 
 ## 0.1.2 candidate (not tagged)
 

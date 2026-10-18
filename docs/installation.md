@@ -1,8 +1,7 @@
 # Installation and compatibility
 
-Use an up-to-date harness with Agent Skills support. The plugin is a local package;
-GitHub hosts its source and releases, not an event service. No connector is mandatory.
-Your harness's login and tool permissions remain authoritative.
+Choose the instructions for your AI assistant below. Eventer uses your existing
+assistant account and any tools you choose to connect.
 
 ## Codex
 
@@ -36,7 +35,7 @@ Start a fresh session and invoke `/eventer:eventer` or
 `/eventer:eventer-setup`. For local authoring use
 `claude --plugin-dir /absolute/path/to/eventer-plugin`.
 Use `/plugin` to inspect, update, disable or uninstall. `claude plugin validate .`
-checks packaging; it does not execute the skills or establish behavioral quality.
+checks the plugin's package structure.
 
 ## Portable Agent Skills installation
 
@@ -48,13 +47,17 @@ python scripts/install.py --destination /path/to/project/.agents/skills
 python scripts/install.py --destination /path/to/project/.agents/skills --apply
 ```
 
-| Harness | Recommended project destination | Validation claim |
-|---|---|---|
-| Cursor | `.cursor/skills` | Documented compatibility; actual status in verification.md |
-| GitHub Copilot | `.github/skills` | Documented compatibility; actual status in verification.md |
-| Gemini CLI | `.gemini/skills` | Documented compatibility; actual status in verification.md |
-| OpenCode | `.opencode/skills` | Documented compatibility; actual status in verification.md |
-| Other Agent Skills harness | Its supported skills directory | Requires discovery, file access and optional script execution |
+| Assistant | Project destination |
+|---|---|
+| Cursor | `.cursor/skills` |
+| GitHub Copilot | `.github/skills` |
+| Gemini CLI | `.gemini/skills` |
+| OpenCode | `.opencode/skills` |
+| Other assistant with Agent Skills support | Its supported skills directory |
+
+Native installation has been tested in Codex and Claude Code. The other paths
+above follow their documented skill formats; see the
+[verification record](verification.md) for testing details.
 
 Replace the example destination with an absolute path on your system. On Windows,
 PowerShell accepts quoted `C:/path/to/project/.agents/skills` paths. Shared
@@ -76,16 +79,15 @@ The installer refuses unexpected files or symlinks in owned skill directories.
 Keep event data in a separate private folder. Scripts require Python 3.12+ and
 IANA timezone data (`python -m pip install -r requirements.txt`).
 
-## Capabilities and graceful fallbacks
+## What you need
 
-- Files: needed for durable event records; without write access, return a draft
-  artifact and explain it has not been saved.
-- Email/calendar/search: use existing authenticated tools when available; otherwise
-  produce drafts, import templates or a research checklist.
-- Scheduler: use existing create/read/update/cancel tools. If absent, provide a
-  manual cadence. Never imply the plugin keeps running after the harness stops.
-- Script execution: needed for deterministic helpers. If absent, produce the input
-  and instructions to run it; do not label a hand calculation as a tested helper run.
+- A folder your assistant can read and write to save your event plans.
+- Python 3.12+ to run the room, meal, ride, and quote calculations. From a cloned
+  or downloaded copy of this repo, run `python -m pip install -r requirements.txt`
+  to install timezone data.
+- Optional email, calendar, or search tools connected to your assistant. Without
+  them, Eventer can help you prepare messages and research lists to use yourself.
+- A scheduler in your assistant if you want recurring reviews or reminders.
 
 ## Source documentation
 

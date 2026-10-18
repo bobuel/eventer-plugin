@@ -1,98 +1,103 @@
 # Eventer
 
-**Plan and run a group event with the AI harness you already use.**
+**Plan a group trip, retreat, or weekend together.**
 
-Eventer is a portable plugin: twelve skills, practical templates, offline planning
-helpers, and a public evaluation suite. It helps a host turn invitations and guest
-replies into accommodation, meals, vendor decisions, an agenda, rides, and a clear
-plan for the day. It follows changes through to wrap-up.
+Eventer helps your AI assistant keep track of guests, rooms, meals, rides, and
+changing plans. Install it in the assistant you already use, give it the event
+details, and work through the planning together.
 
-No Eventer account, server, database, subscription, or background process. Your
-harness supplies the model and connected tools. Your event records stay in a folder
-you choose. Existing model and connected-service charges still apply. Your harness
-and model provider may process files you share; see the [privacy policy](PRIVACY.md).
+It is an open-source plugin with twelve skills and local planning tools. Your
+plans are saved as files you can read, edit, and take with you. There is no
+Eventer account or subscription; you use your existing AI assistant and tools.
 
-## Start here
+## Get started
 
-In Claude Code, add the marketplace with `/plugin marketplace add bobuel/eventer-plugin`,
-then install with `/plugin install eventer@eventer-plugins`.
-
-Install with [the instructions for your harness](docs/installation.md), then ask:
-
-> Use Eventer to help me host a three-day weekend for 12 people. Start with the
-> event brief, the information we need from guests, and a useful next step.
-
-For an existing event:
-
-> Use Eventer to reconcile these replies, show what changed, and identify which
-> room assignments, meal counts and ride plans need review.
-
-The host chooses the folder and authority. Missing email or search access produces
-useful drafts and research checklists. Scheduling uses your harness's existing
-scheduler when available; installing skills alone does not create recurring work.
-
-## What is included
-
-| Skill | What it helps you produce |
-|---|---|
-| `eventer` | A coherent next step across the full event journey |
-| `eventer-setup` | Event brief, records and connected-tool checklist |
-| `eventer-guests` | Evidence-backed attendance, requirements and corrections |
-| `eventer-communications` | Targeted drafts, authorized sends and receipt reconciliation |
-| `eventer-lodging` | Per-night rooming proposals with unresolved conflicts |
-| `eventer-meals` | Meal counts, dietary unknowns and documented accommodations |
-| `eventer-vendors` | Quote comparisons, commitments and remaining balances |
-| `eventer-research` | Sourced options checked against group constraints |
-| `eventer-schedule-transport` | An audience-aware agenda and capacity-checked rides |
-| `eventer-readiness-live` | Readiness review, change impacts and a safe guest digest |
-| `eventer-wrap-up` | Outstanding actions, export and retention review |
-| `eventer-setup-scheduling` | A verified schedule using an existing scheduler |
-
-Install the collection together: specialist skills share the coordinator's
-operating contract and helper library. The entrypoints stay short; references and
-scripts are loaded only when relevant.
-
-## Try the offline helpers
-
-Python 3.12+ is needed only for the helpers and evaluation tooling. On Windows,
-install timezone data; using the runtime requirements works on every platform:
+**Codex** — run in your terminal:
 
 ```sh
-python -m pip install -r requirements.txt
-python -B skills/eventer/scripts/eventer.py rooming --input examples/inputs/rooming.json
-python -B skills/eventer/scripts/eventer.py quote-diff --input examples/inputs/quote-diff.json
+codex plugin marketplace add bobuel/eventer-plugin
+codex plugin add eventer@eventer-plugins
 ```
 
-Planning helpers read JSON and return proposals or validation results. The archive
-helper also creates explicitly requested, verified local copies. They do not contact
-providers, send messages, book transport, or make payments. See the
-[input contracts](skills/eventer/references/helpers.md) and
-[synthetic complete journey](examples/journey/request.md).
+**Claude Code** — run inside Claude Code:
 
-## Evidence and limits
+```text
+/plugin marketplace add bobuel/eventer-plugin
+/plugin install eventer@eventer-plugins
+```
 
-See [verification status](docs/verification.md) for executed checks and gaps.
-The [OpenAI review brief](docs/openai-review.md) separates public installation
-from directory submission. Property access codes stay outside Eventer; use the
-property's secure check-in channel.
-The [evaluation suite](evals/README.md) distinguishes deterministic tests from
-actual model behavior and human review. A schema check is not a successful event.
+For Cursor, GitHub Copilot, Gemini CLI, OpenCode, and other assistants that support
+Agent Skills, see the [installation guide](docs/installation.md). Local planning
+calculations need Python 3.12+; the guide covers setup and dependencies.
 
-Eventer is host-operated. Local files are not a multi-user authorization system,
-and arbitrary providers cannot guarantee exactly-once delivery. Keep uncertain
-actions pending until reconciled. Reviewed proposals do not establish real-world
-availability, accommodation safety, bookings or delivery.
+Then start a new conversation:
 
-## Development
+> Use Eventer to help me plan a three-day weekend for 12 friends. We need a place
+> to stay, two group dinners, and rides from the station. Start with what you
+> need to know.
+
+## From the first invitation to the last day
+
+Start with the dates, budget, guest list, and anything the group needs. Eventer
+helps you organize the details and identify the decisions still to make.
+
+As replies arrive, ask it to update the guest list, suggest room assignments,
+count meals, and check ride capacity. It keeps unanswered questions visible so
+you can follow up before committing to a plan.
+
+When something changes, bring it back to the same event:
+
+> Jamie is arriving Saturday instead of Friday, and Alex can no longer come.
+> Update the room and meal plans, show me what changes, and draft a guest update.
+
+During the event, ask for the day's schedule or help handling a late arrival.
+Afterward, review outstanding costs and follow-ups, then save an archive of the
+event records.
+
+## What it helps with
+
+| Task | Skills |
+|---|---|
+| Get started and decide what to do next | `eventer`, `eventer-setup` |
+| Track invitations, replies, and guest needs | `eventer-guests` |
+| Draft messages and check sending status | `eventer-communications` |
+| Plan rooms and meals | `eventer-lodging`, `eventer-meals` |
+| Compare venues, activities, and vendor quotes | `eventer-research`, `eventer-vendors` |
+| Coordinate the schedule and rides | `eventer-schedule-transport` |
+| Review open tasks and handle changes on the day | `eventer-readiness-live` |
+| Set up recurring reviews through your assistant | `eventer-setup-scheduling` |
+| Review follow-ups and save the event records | `eventer-wrap-up` |
+
+You can ask for Eventer generally or name a skill for a particular task. Install
+the full collection so each skill can use the shared planning tools.
+
+## Working with your tools
+
+Eventer uses the email, search, and scheduling tools available to your assistant.
+You decide what it may send or change. Without a connected tool, it can prepare
+drafts and lists for you to use yourself. Recurring reviews require your
+assistant's scheduler.
+
+Review plans before making commitments with guests or vendors. Keep private
+guest details in your event folder and share only what each recipient needs.
+Your AI provider and connected tools may process information you share with
+them; see the [privacy policy](PRIVACY.md).
+
+## For contributors
+
+The repository includes the skills, Python planning tools, examples, and tests.
+To work on it locally, clone the repo and run:
 
 ```sh
 python -m pip install -r requirements-dev.txt
 python scripts/validate.py
 python evals/run.py offline
-python scripts/package.py
 ```
 
-GitHub Actions runs offline checks on Windows, Linux and macOS without secrets or
-provider calls. Actual harness evaluations are opt-in, bounded and reproducible.
-See [contributing](CONTRIBUTING.md), [security](SECURITY.md),
-[extraction provenance](docs/provenance.md) and [MIT license](LICENSE).
+The [evaluation guide](evals/README.md) explains how to run the hosting scenarios.
+The [verification record](docs/verification.md) documents tested behavior,
+corrections, and limitations. For helper inputs and examples, see the
+[planning tool reference](skills/eventer/references/helpers.md).
+
+[Contributing](CONTRIBUTING.md) · [Report an issue](https://github.com/bobuel/eventer-plugin/issues)
+· [Security](SECURITY.md) · [MIT license](LICENSE)
